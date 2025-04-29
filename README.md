@@ -1,8 +1,6 @@
 # DnDCharacterApp
 
-<p style="text-align: center;">
-    <img src="src/main/resources/com/nightbreeze/images/logo-DnDCharacterApp.jpg" alt="Logo" style="width:300px; height: auto; border-radius: 50px;">
-</p>
+<img src="src/main/resources/com/nightbreeze/images/logo-DnDCharacterApp.jpg" alt="Logo" style="width:300px; height: auto; border-radius: 50px;">
 
 This project is an App you can run to create and manipulate your DnD characters.
 
