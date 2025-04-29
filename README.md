@@ -1,6 +1,8 @@
 # DnDCharacterApp
 
-![logo](https://github.com/KoRIOz675/DnDCharacterApp/blob/main/src/main/resources/com/nightbreeze/images/logo-DnDCharacterApp.jpg)
+<p style="text-align: center;">
+    <img src="src/main/resources/com/nightbreeze/images/logo-DnDCharacterApp.jpg" alt="Logo" style="width:300px; height: auto; border-radius: 50px;">
+</p>
 
 This project is an App you can run to create and manipulate your DnD characters.
 
@@ -24,9 +26,9 @@ Currently, the following will be the implemented features:
 - Ability checks (saving and basic throw, skills tests)
 - Attack checks (attack and damage throw)
 
-### Newest feature added
+<!-- ### Newest feature added
 
-- \#
+- # -->
 
 ### Future improvement
 
