@@ -1,6 +1,6 @@
 # DnDCharacterApp
 
-![logo](https://github.com/KoRIOz675/DnDCharacterApp/src/main/resources/com/nightbreeze/images/logo-DnDCharacterApp.jpg)
+![logo](https://github.com/KoRIOz675/DnDCharacterApp/blob/main/src/main/resources/com/nightbreeze/images/logo-DnDCharacterApp.jpg)
 
 This project is an App you can run to create and manipulate your DnD characters.
 
