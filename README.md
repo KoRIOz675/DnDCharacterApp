@@ -1,6 +1,6 @@
 # DnDCharacterApp
 
-<img src="src/main/resources/com/nightbreeze/images/logo-DnDCharacterApp.jpg" alt="Logo" style="width:300px; height: auto; border-radius: 50px;">
+![logo](src/main/resources/com/nightbreeze/images/logo-DnDCharacterApp.jpg)
 
 This project is an App you can run to create and manipulate your DnD characters.
 
@@ -9,7 +9,7 @@ The visual interface in made in SceneBuilder.
 
 ## Recommendations
 
-I recommend that ou still have the books on other platforms (DnD Beyond, physical, etc.) as this app doesn't give book's information.
+I recommend that ou still have the books on other platforms (DnDBeyond, physical, etc.) as this app doesn't give book's information.
 
 ## Project status
 
