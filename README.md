@@ -31,3 +31,7 @@ Currently, the following will be the implemented features:
 ### Future improvement
 
 This section is for features that will be implemented after the base of the project is finished.
+
+## Copyrights and Other stuff
+
+The style used is Primer Light from [AtlantaFX](https://mkpaz.github.io/atlantafx/).
