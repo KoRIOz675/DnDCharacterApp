@@ -1,85 +1,176 @@
 /*
-* --------------------------------
-*
-* This Controller and View as been Generated with Gemini as a base.
-* The purpose of this was to see how the project could be made.
-*
-* --------------------------------
+ * --------------------------------
+ *
+ * This Controller and View as been Generated with Gemini as a base.
+ * The purpose of this was to see how the project could be made.
+ *
+ * --------------------------------
  */
 
 package com.nightbreeze.controller;
 
 import com.nightbreeze.model.Character;
+import com.nightbreeze.util.DataHelper;
 import com.nightbreeze.util.Dice;
-
+import java.net.URL;
+import java.util.Optional;
+import java.util.ResourceBundle;
+import java.util.function.IntConsumer;
 import javafx.beans.binding.Bindings;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.util.converter.NumberStringConverter;
 
-import java.net.URL;
-import java.util.Optional;
-import java.util.ResourceBundle;
-import java.util.function.IntConsumer;
-
 public class CharacterPageAIGeneratorController implements Initializable {
 
     // FXML Injection -- Main Tab
-    @FXML private TextField characterNameField;
-    @FXML private TextField classLevelField;
-    @FXML private TextField raceField;
-    @FXML private TextField alignmentField;
-    @FXML private TextField backgroundField;
-    @FXML private Label currentHpLabel;
-    @FXML private Label maxHpLabel;
-    @FXML private Label tempHpLabel;
-    @FXML private Button damageButton;
-    @FXML private Button healButton;
-    @FXML private Button addTempHpButton;
-    @FXML private CheckBox deathSaveSuccess1;
-    @FXML private CheckBox deathSaveSuccess2;
-    @FXML private CheckBox deathSaveSuccess3;
-    @FXML private CheckBox deathSaveFail1;
-    @FXML private CheckBox deathSaveFail2;
-    @FXML private CheckBox deathSaveFail3;
-    @FXML private Button rollDeathSaveButton;
+    @FXML
+    private TextField characterNameField;
+
+    @FXML
+    private Label classLevelField;
+
+    @FXML
+    private TextField raceField;
+
+    @FXML
+    private TextField alignmentField;
+
+    @FXML
+    private TextField backgroundField;
+
+    @FXML
+    private Label currentHpLabel;
+
+    @FXML
+    private Label maxHpLabel;
+
+    @FXML
+    private Label tempHpLabel;
+
+    @FXML
+    private Button damageButton;
+
+    @FXML
+    private Button healButton;
+
+    @FXML
+    private Button addTempHpButton;
+
+    @FXML
+    private CheckBox deathSaveSuccess1;
+
+    @FXML
+    private CheckBox deathSaveSuccess2;
+
+    @FXML
+    private CheckBox deathSaveSuccess3;
+
+    @FXML
+    private CheckBox deathSaveFail1;
+
+    @FXML
+    private CheckBox deathSaveFail2;
+
+    @FXML
+    private CheckBox deathSaveFail3;
+
+    @FXML
+    private Button rollDeathSaveButton;
 
     // FXML Injection -- Ability Tab
-    @FXML private TextField strScoreField;
-    @FXML private Label strModLabel;
-    @FXML private Button rollStrCheckButton;
-    @FXML private Button rollStrSaveButton;
-    @FXML private TextField dexScoreField;
-    @FXML private Label dexModLabel;
-    @FXML private Button rollDexCheckButton;
-    @FXML private Button rollDexSaveButton;
-    @FXML private TextField conScoreField;
-    @FXML private Label conModLabel;
-    @FXML private Button rollConCheckButton;
-    @FXML private Button rollConSaveButton;
-    @FXML private TextField intScoreField;
-    @FXML private Label intModLabel;
-    @FXML private Button rollIntCheckButton;
-    @FXML private Button rollIntSaveButton;
-    @FXML private TextField wisScoreField;
-    @FXML private Label wisModLabel;
-    @FXML private Button rollWisCheckButton;
-    @FXML private Button rollWisSaveButton;
-    @FXML private TextField chaScoreField;
-    @FXML private Label chaModLabel;
-    @FXML private Button rollChaCheckButton;
-    @FXML private Button rollChaSaveButton;
+    @FXML
+    private TextField strScoreField;
+
+    @FXML
+    private Label strModLabel;
+
+    @FXML
+    private Button rollStrCheckButton;
+
+    @FXML
+    private Button rollStrSaveButton;
+
+    @FXML
+    private TextField dexScoreField;
+
+    @FXML
+    private Label dexModLabel;
+
+    @FXML
+    private Button rollDexCheckButton;
+
+    @FXML
+    private Button rollDexSaveButton;
+
+    @FXML
+    private TextField conScoreField;
+
+    @FXML
+    private Label conModLabel;
+
+    @FXML
+    private Button rollConCheckButton;
+
+    @FXML
+    private Button rollConSaveButton;
+
+    @FXML
+    private TextField intScoreField;
+
+    @FXML
+    private Label intModLabel;
+
+    @FXML
+    private Button rollIntCheckButton;
+
+    @FXML
+    private Button rollIntSaveButton;
+
+    @FXML
+    private TextField wisScoreField;
+
+    @FXML
+    private Label wisModLabel;
+
+    @FXML
+    private Button rollWisCheckButton;
+
+    @FXML
+    private Button rollWisSaveButton;
+
+    @FXML
+    private TextField chaScoreField;
+
+    @FXML
+    private Label chaModLabel;
+
+    @FXML
+    private Button rollChaCheckButton;
+
+    @FXML
+    private Button rollChaSaveButton;
 
     // FXML Injection -- Notes Tab
-    @FXML private TextArea personalityTraitsArea;
-    @FXML private TextArea idealsArea;
-    @FXML private TextArea bondsArea;
-    @FXML private TextArea flawsArea;
-    @FXML private TextArea backstoryArea;
+    @FXML
+    private TextArea personalityTraitsArea;
+
+    @FXML
+    private TextArea idealsArea;
+
+    @FXML
+    private TextArea bondsArea;
+
+    @FXML
+    private TextArea flawsArea;
+
+    @FXML
+    private TextArea backstoryArea;
 
     // FXML Injection -- TabPane
-    @FXML private TabPane tabPane;
+    @FXML
+    private TabPane tabPane;
 
     // Character Data Model
     private Character currentCharacter;
@@ -87,12 +178,20 @@ public class CharacterPageAIGeneratorController implements Initializable {
     // Init
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        // Create a new character instance
-        currentCharacter = new Character();
+        this.currentCharacter = DataHelper.loadCharacterData();
+
+        if (this.currentCharacter == null) {
+            this.currentCharacter = new Character(); // Create a fresh character
+            System.out.println("Created a new default character.");
+        } else {
+            System.out.println("Loaded character: " + this.currentCharacter.getName());
+        }
 
         bindCharacterData();
 
         addAbilityScoreListener();
+
+        updateAbilityModifiers();
     }
 
     public void bindCharacterData() {
@@ -100,7 +199,7 @@ public class CharacterPageAIGeneratorController implements Initializable {
 
         // Basic Info Binding
         characterNameField.textProperty().bindBidirectional(currentCharacter.CharacterNameProperty());
-        classLevelField.textProperty().bindBidirectional(currentCharacter.levelProperty());
+        classLevelField.textProperty().bind(currentCharacter.classLevelProperty().asString());
         raceField.textProperty().bindBidirectional(currentCharacter.raceProperty());
         alignmentField.textProperty().bindBidirectional(currentCharacter.alignmentProperty());
         backgroundField.textProperty().bindBidirectional(currentCharacter.backgroundProperty());
@@ -191,8 +290,8 @@ public class CharacterPageAIGeneratorController implements Initializable {
 
     @FXML
     private void rollStrSaveButtonAction() {
-        boolean isProficient = false;   // Placeholder
-        int proficientBonus = 2;        // Placeholder
+        boolean isProficient = false; // Placeholder
+        int proficientBonus = 2; // Placeholder
         int modifier = currentCharacter.getStrengthModifier();
         int saveBonus = modifier + (isProficient ? proficientBonus : 0);
         int roll = Dice.rollD20(saveBonus);
@@ -208,8 +307,8 @@ public class CharacterPageAIGeneratorController implements Initializable {
 
     @FXML
     private void rollDexSaveButtonAction() {
-        boolean isProficient = false;   // Placeholder
-        int proficientBonus = 2;        // Placeholder
+        boolean isProficient = false; // Placeholder
+        int proficientBonus = 2; // Placeholder
         int modifier = currentCharacter.getDexterityModifier();
         int saveBonus = modifier + (isProficient ? proficientBonus : 0);
         int roll = Dice.rollD20(saveBonus);
@@ -225,8 +324,8 @@ public class CharacterPageAIGeneratorController implements Initializable {
 
     @FXML
     private void rollConSaveButtonAction() {
-        boolean isProficient = false;   // Placeholder
-        int proficientBonus = 2;        // Placeholder
+        boolean isProficient = false; // Placeholder
+        int proficientBonus = 2; // Placeholder
         int modifier = currentCharacter.getConstitutionModifier();
         int saveBonus = modifier + (isProficient ? proficientBonus : 0);
         int roll = Dice.rollD20(saveBonus);
@@ -242,8 +341,8 @@ public class CharacterPageAIGeneratorController implements Initializable {
 
     @FXML
     private void rollIntSaveButtonAction() {
-        boolean isProficient = false;   // Placeholder
-        int proficientBonus = 2;        // Placeholder
+        boolean isProficient = false; // Placeholder
+        int proficientBonus = 2; // Placeholder
         int modifier = currentCharacter.getIntelligenceModifier();
         int saveBonus = modifier + (isProficient ? proficientBonus : 0);
         int roll = Dice.rollD20(saveBonus);
@@ -259,8 +358,8 @@ public class CharacterPageAIGeneratorController implements Initializable {
 
     @FXML
     private void rollWisSaveButtonAction() {
-        boolean isProficient = false;   // Placeholder
-        int proficientBonus = 2;        // Placeholder
+        boolean isProficient = false; // Placeholder
+        int proficientBonus = 2; // Placeholder
         int modifier = currentCharacter.getWisdomModifier();
         int saveBonus = modifier + (isProficient ? proficientBonus : 0);
         int roll = Dice.rollD20(saveBonus);
@@ -276,8 +375,8 @@ public class CharacterPageAIGeneratorController implements Initializable {
 
     @FXML
     private void rollChaSaveButtonAction() {
-        boolean isProficient = false;   // Placeholder
-        int proficientBonus = 2;        // Placeholder
+        boolean isProficient = false; // Placeholder
+        int proficientBonus = 2; // Placeholder
         int modifier = currentCharacter.getCharismaModifier();
         int saveBonus = modifier + (isProficient ? proficientBonus : 0);
         int roll = Dice.rollD20(saveBonus);
@@ -296,13 +395,13 @@ public class CharacterPageAIGeneratorController implements Initializable {
                 int amount = Integer.parseInt(value);
                 if (amount > 0) {
                     action.accept(amount);
-                }else {
+                } else {
                     Alert alert = new Alert(Alert.AlertType.ERROR);
                     alert.setTitle("Invalid Input");
                     alert.setHeaderText("Please enter a positive number.");
                     alert.showAndWait();
                 }
-            }catch (NumberFormatException e) {
+            } catch (NumberFormatException e) {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Invalid Input");
                 alert.setHeaderText("Please enter a number.");
@@ -311,4 +410,7 @@ public class CharacterPageAIGeneratorController implements Initializable {
         });
     }
 
+    public Character getCurrentCharacter() {
+        return this.currentCharacter;
+    }
 }

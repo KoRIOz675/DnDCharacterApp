@@ -8,13 +8,13 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1080.0" stylesheets="@stylesheet/caspian/primer-light.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nightbreeze.controller.HomePageController">
+<AnchorPane prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nightbreeze.controller.HomePageController">
    <children>
-      <HBox layoutX="3.0" prefHeight="720.0" prefWidth="1080.0" stylesheets="@stylesheet/caspian/primer-light.css">
+      <HBox layoutX="3.0" prefHeight="720.0" prefWidth="1080.0">
          <children>
-            <VBox alignment="CENTER" minHeight="0.0" minWidth="0.0" prefHeight="720.0" prefWidth="800.0" stylesheets="@stylesheet/caspian/primer-light.css">
+            <VBox alignment="CENTER" minHeight="0.0" minWidth="0.0" prefHeight="720.0" prefWidth="800.0">
                <children>
-                  <Button mnemonicParsing="false" text="Create a new Character" />
+                  <Button fx:id="characterButton" mnemonicParsing="false" onAction="#characterButtonAction" text="Create a new Character" />
                </children>
             </VBox>
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">

@@ -11,4 +11,5 @@ module com.nightbreeze {
     exports com.nightbreeze;
     exports com.nightbreeze.model;
     exports com.nightbreeze.util;
+    opens com.nightbreeze.util to javafx.base;
 }

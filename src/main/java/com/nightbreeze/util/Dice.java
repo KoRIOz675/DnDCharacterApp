@@ -43,12 +43,12 @@ public class Dice {
             }
 
             int total = 0;
-            for (int i = 0; i<numberDice; i++) {
+            for (int i = 0; i < numberDice; i++) {
                 total += roll(sideDice);
             }
 
-            return total+modifier;
-        }catch (NumberFormatException e) {
+            return total + modifier;
+        } catch (NumberFormatException e) {
             System.err.println("Invalid dice value: " + dice);
             return 0;
         }
