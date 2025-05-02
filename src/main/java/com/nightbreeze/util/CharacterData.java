@@ -8,10 +8,10 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 import com.nightbreeze.model.Character;
 import javafx.scene.control.Alert;
 
-public class DataHelper {
+public class CharacterData {
 
     // Config
-    private static final String DATA_FOLDER = ".DnDAppCharacters";
+    private static final String DATA_FOLDER = "DnDAppCharacters";
     private static final String DEFAULT_FILENAME = "characters_data.json";
 
     // Jackson
@@ -24,11 +24,11 @@ public class DataHelper {
     }
 
     // File Management
-    public static File getDataFolder() {
+    public static void createDataFolder() {
         String userHome = System.getProperty("user.home") + "/documents";
         if (userHome == null) {
             System.out.println("Cannot find system property user home directory");
-            return null;
+            return;
         }
 
         File appFolder = new File(userHome, DATA_FOLDER);
@@ -37,17 +37,35 @@ public class DataHelper {
         if (!appFolder.exists()) {
             if (!appFolder.mkdirs()) {
                 System.out.println("Cannot create data folder at " + appFolder.getAbsolutePath());
-                return null;
+                return;
             }
             System.out.println("Created data folder at " + appFolder.getAbsolutePath());
         }
+    }
 
-        if (!appFolder.isDirectory() || !appFolder.canWrite()) {
-            System.out.println("Application data directory is not valid or not writable: " + appFolder.getAbsolutePath());
+    public static File getDataFolder() {
+        String userHome = System.getProperty("user.home") + "/documents";
+        if (userHome == null) {
+            System.out.println("Cannot find system property user home directory");
             return null;
         }
 
-        return appFolder;
+        File dataFolder = new File(userHome, DATA_FOLDER);
+
+        // Create the directory if not exist
+        if (!dataFolder.exists()) {
+            if (!dataFolder.mkdirs()) {
+                System.out.println("Cannot create data folder at " + dataFolder.getAbsolutePath());
+                return null;
+            }
+            System.out.println("Created data folder at " + dataFolder.getAbsolutePath());
+        }
+        if (!dataFolder.isDirectory() || !dataFolder.canWrite()) {
+            System.out.println("Application data directory is not valid or not writable: " + dataFolder.getAbsolutePath());
+            return null;
+        }
+
+        return dataFolder;
     }
 
     public static File getCharacterData() {

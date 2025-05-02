@@ -11,7 +11,6 @@ import java.util.ResourceBundle;
 public class CreateCharacterController implements Initializable {
 
     @FXML private TextField characterName;
-    @FXML private TextField characterClass;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

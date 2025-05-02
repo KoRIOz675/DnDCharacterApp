@@ -1,7 +1,7 @@
 package com.nightbreeze.controller;
 
 import com.nightbreeze.model.Character;
-import com.nightbreeze.util.DataHelper;
+import com.nightbreeze.util.CharacterData;
 import com.nightbreeze.util.GUIManager;
 
 import javafx.event.ActionEvent;
@@ -11,7 +11,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -30,7 +29,6 @@ public class HomePageController implements Initializable {
     public void characterButtonAction(ActionEvent event) throws IOException {
         if (currentCharacter == null) {
             Parent root = GUIManager.loadFXML("create-character");
-//            GUIManager.loadStage("create-character");
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = stage.getScene();
             scene.setRoot(root);
@@ -40,7 +38,7 @@ public class HomePageController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        currentCharacter = DataHelper.loadCharacterData();
+        currentCharacter = CharacterData.loadCharacterData();
 
         if (currentCharacter == null) {
             characterButton.setText("Create a new Character");

@@ -10,7 +10,7 @@
 package com.nightbreeze.controller;
 
 import com.nightbreeze.model.Character;
-import com.nightbreeze.util.DataHelper;
+import com.nightbreeze.util.CharacterData;
 import com.nightbreeze.util.Dice;
 import java.net.URL;
 import java.util.Optional;
@@ -178,7 +178,7 @@ public class CharacterPageAIGeneratorController implements Initializable {
     // Init
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        this.currentCharacter = DataHelper.loadCharacterData();
+        this.currentCharacter = CharacterData.loadCharacterData();
 
         if (this.currentCharacter == null) {
             this.currentCharacter = new Character(); // Create a fresh character

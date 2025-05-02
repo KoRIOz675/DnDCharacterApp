@@ -30,7 +30,7 @@ Currently, the following will be the implemented features:
 
 - Visual for the main page
 - JSON files (species, weapons, classes, armors, tools, etc.)
-- Creation of a character and storing into a JSON file (stored in `C:\Users\[user]\Documents\.DnDAppCharacters`)
+- Creation of a character and storing into a JSON file (stored in `C:\Users\[user]\Documents\DnDAppCharacters`)
 
 ### Newest feature added
 
