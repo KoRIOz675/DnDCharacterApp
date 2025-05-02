@@ -40,6 +40,9 @@ This section is for the newest features added to the project.
 
 This section is for features that will be implemented after the base of the project is finished.
 
+- Other than the Player's Handbook species.
+- Other than the Player's Handbook classes.
+
 ## Copyrights and Other stuff
 
 The theme used is Primer Light from [AtlantaFX](https://mkpaz.github.io/atlantafx/).
