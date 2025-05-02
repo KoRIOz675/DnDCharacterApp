@@ -12,4 +12,5 @@ module com.nightbreeze {
     exports com.nightbreeze.model;
     exports com.nightbreeze.util;
     opens com.nightbreeze.util to javafx.base;
+    opens com.nightbreeze.controller.characterCreation to javafx.fxml;
 }

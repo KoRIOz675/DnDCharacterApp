@@ -94,6 +94,7 @@ public class Character {
         return charisma;
     }
 
+
     // Getters & Setters -- Basic Info
     public String getName() {
         return characterName.get();

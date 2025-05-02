@@ -28,12 +28,8 @@ public class HomePageController implements Initializable {
     @FXML
     public void characterButtonAction(ActionEvent event) throws IOException {
         if (currentCharacter == null) {
-            Parent root = GUIManager.loadFXML("create-character");
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = stage.getScene();
-            scene.setRoot(root);
+            GUIManager.loadStage("character-name");
         }
-
     }
 
     @Override
@@ -44,7 +40,7 @@ public class HomePageController implements Initializable {
             characterButton.setText("Create a new Character");
             System.out.println("Characters' file empty.");
         } else {
-            characterButton.setText("Characters' file not empty.");
+            characterButton.setText("Load Character: " + currentCharacter.getName());
             System.out.println("Loaded character: " + currentCharacter.getName());
         }
     }

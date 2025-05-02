@@ -19,7 +19,6 @@ public class App extends Application {
         CharacterData.createDataFolder();
         GUIManager.loadStage("home-page");
         List<Species> allSpecies = JsonFileReader.readJsonDataFile("species");
-// You can now iterate over allSpecies, populate a ComboBox, etc.
         for (Species s : allSpecies) {
             System.out.println("Found species: " + s.getName());
         }

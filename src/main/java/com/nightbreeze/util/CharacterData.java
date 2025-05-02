@@ -6,13 +6,14 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
 import com.nightbreeze.model.Character;
-import javafx.scene.control.Alert;
+
+import static com.nightbreeze.util.Utils.showErrorAlert;
 
 public class CharacterData {
 
     // Config
     private static final String DATA_FOLDER = "DnDAppCharacters";
-    private static final String DEFAULT_FILENAME = "characters_data.json";
+    private static final String DEFAULT_FILENAME = "character_data.json";
 
     // Jackson
     private static final ObjectMapper mapper = createObjectMapper();
@@ -124,13 +125,5 @@ public class CharacterData {
             System.out.println("Character data file not found or not accessible: " + dataFile.getAbsolutePath());
             return null;
         }
-    }
-
-    private static void showErrorAlert(String title, String message) {
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle(title);
-        alert.setHeaderText(null);
-        alert.setContentText(message);
-        alert.showAndWait();
     }
 }
