@@ -37,15 +37,20 @@
                                 <Insets bottom="5.0" top="5.0" />
                             </VBox.margin>
                         </Button>
+                    </children>
+                </VBox>
+                <VBox alignment="CENTER" prefHeight="360.0" prefWidth="300.0">
+                    <children>
                         <Button fx:id="halfElfButton" mnemonicParsing="false" onAction="#halfElfButtonOnAction" prefHeight="25.0" prefWidth="100.0" text="Half-Elf">
                             <VBox.margin>
                                 <Insets bottom="5.0" top="5.0" />
                             </VBox.margin>
                         </Button>
-                    </children>
-                </VBox>
-                <VBox alignment="CENTER" prefHeight="360.0" prefWidth="300.0">
-                    <children>
+                  <Button fx:id="halfOrcButton" mnemonicParsing="false" onAction="#halfOrcButtonOnAction" prefHeight="25.0" prefWidth="100.0" text="Half-Orc">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
                         <Button fx:id="humanButton" mnemonicParsing="false" onAction="#humanButtonOnAction" prefHeight="25.0" prefWidth="100.0" text="Human">
                             <VBox.margin>
                                 <Insets bottom="5.0" top="5.0" />

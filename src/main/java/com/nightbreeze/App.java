@@ -18,10 +18,6 @@ public class App extends Application {
     public void start(Stage stage) throws IOException {
         CharacterData.createDataFolder();
         GUIManager.loadStage("home-page");
-        List<Species> allSpecies = JsonFileReader.readJsonDataFile("species");
-        for (Species s : allSpecies) {
-            System.out.println("Found species: " + s.getName());
-        }
     }
 
     public static void main(String[] args) {

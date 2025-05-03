@@ -3,6 +3,9 @@ package com.nightbreeze.model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import javafx.beans.property.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Character {
 
     // Basic Information
@@ -12,8 +15,10 @@ public class Character {
     private final StringProperty background = new SimpleStringProperty();
     private final StringProperty playerName = new SimpleStringProperty();
     private final StringProperty race = new SimpleStringProperty();
+    private final StringProperty subRace = new SimpleStringProperty();
     private final StringProperty alignment = new SimpleStringProperty();
     private final IntegerProperty experiencePoints = new SimpleIntegerProperty(0);
+    private final IntegerProperty speed = new SimpleIntegerProperty();
 
     private final BooleanProperty inspiration = new SimpleBooleanProperty(false);
 
@@ -29,6 +34,18 @@ public class Character {
     private final IntegerProperty intelligence = new SimpleIntegerProperty();
     private final IntegerProperty wisdom = new SimpleIntegerProperty();
     private final IntegerProperty charisma = new SimpleIntegerProperty();
+
+    // Customisation Options
+    private final StringProperty age = new SimpleStringProperty();
+    private final StringProperty height = new SimpleStringProperty();
+    private final StringProperty weight = new SimpleStringProperty();
+    private final StringProperty eyes = new SimpleStringProperty();
+    private final StringProperty skin = new SimpleStringProperty();
+    private final StringProperty hair = new SimpleStringProperty();
+
+    // Features
+    private final List<String> language = new ArrayList<>();
+    private final List<String> racialTraits = new ArrayList<>();
 
     // Constructor
     public Character() {}
@@ -54,9 +71,13 @@ public class Character {
         return background;
     }
 
+    public StringProperty playerNameProperty() {return playerName;}
+
     public StringProperty alignmentProperty() {
         return alignment;
     }
+
+    public IntegerProperty experiencePointsProperty() {return experiencePoints;}
 
     public IntegerProperty maxHPProperty() {
         return maxHP;
@@ -94,6 +115,20 @@ public class Character {
         return charisma;
     }
 
+    public StringProperty ageProperty() {return age;}
+
+    public StringProperty heightProperty() {return height;}
+
+    public StringProperty weightProperty() {return weight;}
+
+    public StringProperty eyesProperty() {return eyes;}
+
+    public StringProperty skinProperty() {return skin;}
+
+    public StringProperty hairProperty() {return hair;}
+
+    public IntegerProperty speedProperty() {return speed;}
+
 
     // Getters & Setters -- Basic Info
     public String getName() {
@@ -120,6 +155,10 @@ public class Character {
         this.race.set(race);
     }
 
+    public String getSubRace() {return subRace.get();}
+
+    public void setSubRace(String subRace) {this.subRace.set(subRace);}
+
     public int getLevel() {
         return classLevel.get();
     }
@@ -143,6 +182,10 @@ public class Character {
     public void setAlignment(String alignment) {
         this.alignment.set(alignment);
     }
+
+    public int getSpeed() {return speed.get();}
+
+    public void setSpeed(int speed) {this.speed.set(speed);}
 
     // Getters & Setters -- Max Hit Points
     public int getMaxHP() {
@@ -221,6 +264,50 @@ public class Character {
 
     public void setCharisma(int score) {
         this.charisma.set(score);
+    }
+
+    // Getters & Setters -- Customisation Options
+    public String getAge() {return age.get();}
+
+    public void setAge(String age) {this.age.set(age);}
+
+    public String getHeight() {return height.get();}
+
+    public void setHeight(String height) {this.height.set(height);}
+
+    public String getWeight() {return weight.get();}
+
+    public void setWeight(String weight) {this.weight.set(weight);}
+
+    public String getEyes() {return eyes.get();}
+
+    public void setEyes(String eyes) {this.eyes.set(eyes);}
+
+    public String getSkin() {return skin.get();}
+
+    public void setSkin(String skin) {this.skin.set(skin);}
+
+    public String getHair() {return hair.get();}
+
+    public void setHair(String hair) {this.hair.set(hair);}
+
+    // Getters & Setters -- Features
+    public List<String> getLanguage() {return language;}
+
+    public void setLanguage(List<String> language) {
+        this.language.clear();
+        if (language != null) {
+            this.language.addAll(language);
+        }
+    }
+
+    public List<String> getRacialTraits() {return racialTraits;}
+
+    public void setRacialTraits(List<String> traits) {
+        this.racialTraits.clear();
+        if (traits != null) {
+            this.racialTraits.addAll(traits);
+        }
     }
 
     // Getters -- Ability Modifier
