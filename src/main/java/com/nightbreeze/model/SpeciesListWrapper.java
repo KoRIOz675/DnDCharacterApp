@@ -3,6 +3,7 @@ package com.nightbreeze.model;
 import java.util.List;
 
 public class SpeciesListWrapper {
+
     private List<Species> species;
 
     public List<Species> getSpecies() {

@@ -1,8 +1,16 @@
 package com.nightbreeze.controller.characterCreation;
 
+import static com.nightbreeze.controller.characterCreation.characterNameController.character;
+import static com.nightbreeze.controller.characterCreation.characterSpeciesController.selectedSpecies;
+import static com.nightbreeze.util.Utils.showErrorAlert;
+
 import com.nightbreeze.model.Subrace;
 import com.nightbreeze.util.CharacterData;
 import com.nightbreeze.util.GUIManager;
+import java.io.IOException;
+import java.net.URL;
+import java.util.List;
+import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -13,39 +21,59 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
-import java.io.IOException;
-import java.net.URL;
-import java.util.List;
-import java.util.Objects;
-import java.util.ResourceBundle;
-
-import static com.nightbreeze.controller.characterCreation.characterNameController.character;
-import static com.nightbreeze.controller.characterCreation.characterSpeciesController.selectedSpecies;
-import static com.nightbreeze.util.Utils.showErrorAlert;
-
 public class CharacterSubSpeciesController implements Initializable {
 
-    @FXML private Label speciesNameLabel;
-    @FXML private Label speciesDescriptionLabel;
-    @FXML private Button subSpecies1Button;
-    @FXML private Button subSpecies2Button;
-    @FXML private Button subSpecies3Button;
-    @FXML private Button subSpecies4Button;
-    @FXML private Button subSpecies5Button;
-    @FXML private Button subSpecies6Button;
-    @FXML private Button subSpecies7Button;
-    @FXML private Button subSpecies8Button;
-    @FXML private Button subSpecies9Button;
-    @FXML private Button subSpecies10Button;
+    @FXML
+    private Label speciesNameLabel;
 
-    private List<Button> subSpeciesButtons;
-    private CharacterData characterData = new CharacterData();
+    @FXML
+    private Label speciesDescriptionLabel;
+
+    @FXML
+    private Button subSpecies1Button;
+
+    @FXML
+    private Button subSpecies2Button;
+
+    @FXML
+    private Button subSpecies3Button;
+
+    @FXML
+    private Button subSpecies4Button;
+
+    @FXML
+    private Button subSpecies5Button;
+
+    @FXML
+    private Button subSpecies6Button;
+
+    @FXML
+    private Button subSpecies7Button;
+
+    @FXML
+    private Button subSpecies8Button;
+
+    @FXML
+    private Button subSpecies9Button;
+
+    @FXML
+    private Button subSpecies10Button;
+
+    private final CharacterData characterData = new CharacterData();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        subSpeciesButtons = List.of(
-                subSpecies1Button, subSpecies2Button, subSpecies3Button, subSpecies4Button, subSpecies5Button,
-                subSpecies6Button, subSpecies7Button, subSpecies8Button, subSpecies9Button, subSpecies10Button
+        List<Button> subSpeciesButtons = List.of(
+            subSpecies1Button,
+            subSpecies2Button,
+            subSpecies3Button,
+            subSpecies4Button,
+            subSpecies5Button,
+            subSpecies6Button,
+            subSpecies7Button,
+            subSpecies8Button,
+            subSpecies9Button,
+            subSpecies10Button
         );
 
         subSpeciesButtons.forEach(button -> {

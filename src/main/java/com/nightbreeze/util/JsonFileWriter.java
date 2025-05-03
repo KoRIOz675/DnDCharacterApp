@@ -1,4 +1,3 @@
 package com.nightbreeze.util;
 
-public class JsonFileWriter {
-}
+public class JsonFileWriter {}

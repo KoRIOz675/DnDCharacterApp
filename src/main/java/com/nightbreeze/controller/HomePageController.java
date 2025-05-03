@@ -3,14 +3,10 @@ package com.nightbreeze.controller;
 import com.nightbreeze.model.Character;
 import com.nightbreeze.util.CharacterData;
 import com.nightbreeze.util.GUIManager;
-
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 
@@ -22,7 +18,7 @@ public class HomePageController implements Initializable {
     Character currentCharacter;
 
     @FXML
-    public void characterButtonAction(ActionEvent event) throws IOException {
+    public void characterButtonAction() throws IOException {
         if (currentCharacter == null) {
             GUIManager.loadStage("character-name");
         }

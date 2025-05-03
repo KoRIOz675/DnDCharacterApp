@@ -1,0 +1,23 @@
+{
+  "name": "dndcharacterapp",
+  "version": "1.0.0",
+  "description": "![logo](src/main/resources/com/nightbreeze/images/logo-DnDCharacterApp.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KoRIOz675/DnDCharacterApp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KoRIOz675/DnDCharacterApp/issues"
+  },
+  "homepage": "https://github.com/KoRIOz675/DnDCharacterApp#readme",
+  "devDependencies": {
+    "prettier": "^3.5.3"
+  }
+}

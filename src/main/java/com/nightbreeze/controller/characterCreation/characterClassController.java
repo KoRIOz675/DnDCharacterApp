@@ -1,35 +1,57 @@
 package com.nightbreeze.controller.characterCreation;
 
+import static com.nightbreeze.controller.characterCreation.characterNameController.character;
+
 import com.nightbreeze.util.CharacterData;
+import java.net.URL;
+import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import static com.nightbreeze.controller.characterCreation.characterNameController.character;
-
-import java.net.URL;
-import java.util.ResourceBundle;
 
 public class characterClassController implements Initializable {
 
-    @FXML private Button barbarianButton;
-    @FXML private Button bardButton;
-    @FXML private Button clericButton;
-    @FXML private Button druidButton;
-    @FXML private Button fighterButton;
-    @FXML private Button monkButton;
-    @FXML private Button paladinButton;
-    @FXML private Button rangerButton;
-    @FXML private Button rogueButton;
-    @FXML private Button sorcererButton;
-    @FXML private Button warlockButton;
-    @FXML private Button wizardButton;
+    @FXML
+    private Button barbarianButton;
+
+    @FXML
+    private Button bardButton;
+
+    @FXML
+    private Button clericButton;
+
+    @FXML
+    private Button druidButton;
+
+    @FXML
+    private Button fighterButton;
+
+    @FXML
+    private Button monkButton;
+
+    @FXML
+    private Button paladinButton;
+
+    @FXML
+    private Button rangerButton;
+
+    @FXML
+    private Button rogueButton;
+
+    @FXML
+    private Button sorcererButton;
+
+    @FXML
+    private Button warlockButton;
+
+    @FXML
+    private Button wizardButton;
 
     CharacterData characterData = new CharacterData();
 
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-    }
+    public void initialize(URL url, ResourceBundle resourceBundle) {}
 
     public void barbarianButtonOnAction(ActionEvent actionEvent) {
         character.setClassName("barbarian");
@@ -91,4 +113,3 @@ public class characterClassController implements Initializable {
         characterData.saveCharacterData(character);
     }
 }
-

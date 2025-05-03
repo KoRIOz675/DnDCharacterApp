@@ -134,15 +134,8 @@
             "size": "Medium",
             "speed": 25,
             "proficiency": {
-                "weapons": [
-                    "battleaxe",
-                    "handaxe",
-                    "throwing hammer",
-                    "warhammer"
-                ],
-                "tools": [
-                    "artisan's tools"
-                ]
+                "weapons": ["battleaxe", "handaxe", "throwing hammer", "warhammer"],
+                "tools": "artisan's tools"
             },
             "traits": [
                 {
@@ -194,10 +187,7 @@
                         }
                     ],
                     "proficiency": {
-                        "armor": [
-                            "light",
-                            "medium"
-                        ]
+                        "armor": ["light", "medium"]
                     }
                 }
             ]
@@ -210,9 +200,7 @@
             "size": "Medium",
             "speed": 30,
             "proficiency": {
-                "skill": [
-                    "Perception"
-                ]
+                "skill": ["Perception"]
             },
             "traits": [
                 {
@@ -252,12 +240,7 @@
                         }
                     ],
                     "proficiency": {
-                        "weapons": [
-                            "longsword",
-                            "shortsword",
-                            "shortbow",
-                            "longbow"
-                        ]
+                        "weapons": ["longsword", "shortsword", "shortbow", "longbow"]
                     }
                 },
                 {
@@ -272,10 +255,7 @@
                         }
                     ],
                     "proficiency": {
-                        "armor": [
-                            "light",
-                            "medium"
-                        ]
+                        "armor": ["light", "medium"]
                     }
                 }
             ]

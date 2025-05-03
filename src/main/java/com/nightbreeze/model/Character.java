@@ -1,10 +1,9 @@
 package com.nightbreeze.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import javafx.beans.property.*;
-
 import java.util.ArrayList;
 import java.util.List;
+import javafx.beans.property.*;
 
 public class Character {
 
@@ -71,13 +70,17 @@ public class Character {
         return background;
     }
 
-    public StringProperty playerNameProperty() {return playerName;}
+    public StringProperty playerNameProperty() {
+        return playerName;
+    }
 
     public StringProperty alignmentProperty() {
         return alignment;
     }
 
-    public IntegerProperty experiencePointsProperty() {return experiencePoints;}
+    public IntegerProperty experiencePointsProperty() {
+        return experiencePoints;
+    }
 
     public IntegerProperty maxHPProperty() {
         return maxHP;
@@ -115,20 +118,33 @@ public class Character {
         return charisma;
     }
 
-    public StringProperty ageProperty() {return age;}
+    public StringProperty ageProperty() {
+        return age;
+    }
 
-    public StringProperty heightProperty() {return height;}
+    public StringProperty heightProperty() {
+        return height;
+    }
 
-    public StringProperty weightProperty() {return weight;}
+    public StringProperty weightProperty() {
+        return weight;
+    }
 
-    public StringProperty eyesProperty() {return eyes;}
+    public StringProperty eyesProperty() {
+        return eyes;
+    }
 
-    public StringProperty skinProperty() {return skin;}
+    public StringProperty skinProperty() {
+        return skin;
+    }
 
-    public StringProperty hairProperty() {return hair;}
+    public StringProperty hairProperty() {
+        return hair;
+    }
 
-    public IntegerProperty speedProperty() {return speed;}
-
+    public IntegerProperty speedProperty() {
+        return speed;
+    }
 
     // Getters & Setters -- Basic Info
     public String getName() {
@@ -155,9 +171,13 @@ public class Character {
         this.race.set(race);
     }
 
-    public String getSubRace() {return subRace.get();}
+    public String getSubRace() {
+        return subRace.get();
+    }
 
-    public void setSubRace(String subRace) {this.subRace.set(subRace);}
+    public void setSubRace(String subRace) {
+        this.subRace.set(subRace);
+    }
 
     public int getLevel() {
         return classLevel.get();
@@ -183,9 +203,13 @@ public class Character {
         this.alignment.set(alignment);
     }
 
-    public int getSpeed() {return speed.get();}
+    public int getSpeed() {
+        return speed.get();
+    }
 
-    public void setSpeed(int speed) {this.speed.set(speed);}
+    public void setSpeed(int speed) {
+        this.speed.set(speed);
+    }
 
     // Getters & Setters -- Max Hit Points
     public int getMaxHP() {
@@ -267,32 +291,58 @@ public class Character {
     }
 
     // Getters & Setters -- Customisation Options
-    public String getAge() {return age.get();}
+    public String getAge() {
+        return age.get();
+    }
 
-    public void setAge(String age) {this.age.set(age);}
+    public void setAge(String age) {
+        this.age.set(age);
+    }
 
-    public String getHeight() {return height.get();}
+    public String getHeight() {
+        return height.get();
+    }
 
-    public void setHeight(String height) {this.height.set(height);}
+    public void setHeight(String height) {
+        this.height.set(height);
+    }
 
-    public String getWeight() {return weight.get();}
+    public String getWeight() {
+        return weight.get();
+    }
 
-    public void setWeight(String weight) {this.weight.set(weight);}
+    public void setWeight(String weight) {
+        this.weight.set(weight);
+    }
 
-    public String getEyes() {return eyes.get();}
+    public String getEyes() {
+        return eyes.get();
+    }
 
-    public void setEyes(String eyes) {this.eyes.set(eyes);}
+    public void setEyes(String eyes) {
+        this.eyes.set(eyes);
+    }
 
-    public String getSkin() {return skin.get();}
+    public String getSkin() {
+        return skin.get();
+    }
 
-    public void setSkin(String skin) {this.skin.set(skin);}
+    public void setSkin(String skin) {
+        this.skin.set(skin);
+    }
 
-    public String getHair() {return hair.get();}
+    public String getHair() {
+        return hair.get();
+    }
 
-    public void setHair(String hair) {this.hair.set(hair);}
+    public void setHair(String hair) {
+        this.hair.set(hair);
+    }
 
     // Getters & Setters -- Features
-    public List<String> getLanguage() {return language;}
+    public List<String> getLanguage() {
+        return language;
+    }
 
     public void setLanguage(List<String> language) {
         this.language.clear();
@@ -301,7 +351,9 @@ public class Character {
         }
     }
 
-    public List<String> getRacialTraits() {return racialTraits;}
+    public List<String> getRacialTraits() {
+        return racialTraits;
+    }
 
     public void setRacialTraits(List<String> traits) {
         this.racialTraits.clear();

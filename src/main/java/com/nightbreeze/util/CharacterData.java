@@ -1,13 +1,12 @@
 package com.nightbreeze.util;
 
-import java.io.File;
-import java.io.IOException;
+import static com.nightbreeze.util.Utils.showErrorAlert;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
-
 import com.nightbreeze.model.Character;
-
-import static com.nightbreeze.util.Utils.showErrorAlert;
+import java.io.File;
+import java.io.IOException;
 
 public class CharacterData {
 
@@ -118,7 +117,12 @@ public class CharacterData {
             } catch (IOException e) {
                 System.out.println("Could not load character data from " + dataFile.getAbsolutePath());
                 e.printStackTrace();
-                showErrorAlert("Load Error", "Could not read or parse character data file:\n" + e.getMessage() + "\n\nA new character will be created.");
+                showErrorAlert(
+                    "Load Error",
+                    "Could not read or parse character data file:\n" +
+                    e.getMessage() +
+                    "\n\nA new character will be created."
+                );
                 return null;
             }
         } else {
