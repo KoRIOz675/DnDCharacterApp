@@ -9,7 +9,7 @@ public class Trait {
     private Integer range; // Use Integer wrapper class for optional fields
     private String description;
 
-    // Getters and Setters...
+    // Getters and Setters
     public String getName() {
         return name;
     }

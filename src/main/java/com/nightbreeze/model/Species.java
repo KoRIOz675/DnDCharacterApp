@@ -1,7 +1,6 @@
 package com.nightbreeze.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -13,7 +12,6 @@ public class Species {
     private Map<String, Integer> abilityScoreIncrease;
     private String size;
     private int speed;
-    private Proficiency proficiency;
     private List<Trait> traits = new ArrayList<>();
     private List<Language> languages = new ArrayList<>();
     private List<Subrace> subraces = new ArrayList<>();
@@ -49,14 +47,6 @@ public class Species {
 
     public void setSpeed(int speed) {
         this.speed = speed;
-    }
-
-    public Proficiency getProficiency() {
-        return proficiency;
-    }
-
-    public void setProficiency(Proficiency proficiency) {
-        this.proficiency = proficiency;
     }
 
     public List<Trait> getTraits() {
