@@ -36,6 +36,9 @@ Currently, the following will be the implemented features:
 
 This section is for the newest features added to the project.
 
+- Possibility to enter the name of the character
+- Choice for the Species/subspecies if present
+
 ### Future improvement
 
 This section is for features that will be implemented after the base of the project is finished.
