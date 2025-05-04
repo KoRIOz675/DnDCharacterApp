@@ -130,4 +130,18 @@ public class CharacterData {
             return null;
         }
     }
+
+    public static void deleteCharacterData() {
+        File dataFile = getCharacterData();
+        if (dataFile == null) {
+            showErrorAlert("Delete Error", "Could not determine delete location.");
+            return;
+        }
+
+        if (dataFile.exists() && dataFile.canWrite() && dataFile.isFile()) {
+            System.out.println("Deleting character data from " + dataFile.getAbsolutePath());
+            dataFile.delete();
+            System.out.println("Deleted character data from " + dataFile.getAbsolutePath());
+        }
+    }
 }

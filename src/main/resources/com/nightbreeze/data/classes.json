@@ -1,0 +1,129 @@
+{
+    "classes": [
+        {
+            "name": "Barbarian",
+            "hitDice": "1d12",
+            "hitPointsLevel1": 12,
+            "hitPointsLevel1Modifier": "Constitution",
+            "hitPointsHigherLevel": "1d12",
+            "hitPointsHigherLevelModifier": "Constitution",
+            "proficiencies": {
+                "armor": ["light armor", "medium armor", "shields"],
+                "weapons": ["simple weapons", "martial weapons"],
+                "tools": ["none"]
+            },
+            "savingThrows": ["Strength", "Constitution"],
+            "skills": {
+                "choose": 2,
+                "options": ["Animal Handling", "Athletics", "Intimidation", "Survival"]
+            },
+            "equipment": {
+                "choose": 1,
+                "options": {
+                    "mainWeapon": [
+                        {
+                            "item": "Greataxe",
+                            "quantity": 1
+                        },
+                        {
+                            "item": "Any martial weapon",
+                            "quantity": 1
+                        }
+                    ],
+                    "secondaryWeapon": [
+                        {
+                            "item": "Handaxes",
+                            "quantity": 2
+                        },
+                        {
+                            "item": "Any simple weapon",
+                            "quantity": 1
+                        }
+                    ]
+                },
+                "pack": ["Explorer's Pack"],
+                "other": {
+                    "item": ["Javelins"],
+                    "quantity": [4]
+                }
+            },
+            "features": [
+                {
+                    "name": "Rage",
+                    "description": "You can enter a rage as a bonus action. While raging, you gain advantage on Strength checks and Strength saving throws, and you gain a bonus to the damage roll of your melee weapon attacks."
+                },
+                {
+                    "name": "Unarmored Defense",
+                    "description": "While you are not wearing armor, your AC equals 10 + your Dexterity modifier + your Constitution modifier."
+                }
+            ],
+            "enhancements": [
+                {
+                    "name": "Reckless Attack",
+                    "level": 2,
+                    "description": "You can throw aside all concern for defense to attack with fierce desperation. When you make your first attack on your turn, you can decide to attack recklessly. Doing so gives you advantage on melee weapon attack rolls using Strength during this turn, but attack rolls against you have advantage until your next turn."
+                },
+                {
+                    "name": "Danger Sense",
+                    "level": 2,
+                    "description": "you gain an uncanny sense of when things nearby aren’t as they should be, giving you an edge when you dodge away from danger.You have advantage on Dexterity saving throws against effects that you can see, such as traps and spells. To gain this benefit, you can’t be blinded, deafened, or incapacitated."
+                },
+                {
+                    "name": "Primal Path",
+                    "level": 3,
+                    "description": "You choose a path that shapes the nature of your rage. Choose the Path of the Berserker or the Path of the Totem Warrior, both detailed at the end of the class description. Your choice grants you features at 3rd level and again at 6th, 10th, and 14th levels."
+                },
+                {
+                    "name": "Ability Score Improvement",
+                    "level": 4,
+                    "description": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th levels, you can increase one ability score of your choice by 2 or increase two ability scores of your choice by 1."
+                },
+                {
+                    "name": "Extra Attack",
+                    "level": 5,
+                    "description": "Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn."
+                },
+                {
+                    "name": "Fast Movement",
+                    "level": 5,
+                    "description": "Your speed increases by 10 feet while you are not wearing heavy armor."
+                },
+                {
+                    "name": "Feral Instinct",
+                    "level": 7,
+                    "description": "your instincts are so honed that you have advantage on initiative rolls. Additionally, if you are surprised at the beginning of combat and aren’t incapacitated, you can act normally on your first turn, but only if you enter your rage before doing anything else on that turn."
+                },
+                {
+                    "name": "Ability Score Improvement",
+                    "level": 8,
+                    "description": "You can increase one ability score of your choice by 2 or increase two ability scores of your choice by 1."
+                },
+                {
+                    "name": "Brutal Critical",
+                    "level": 9,
+                    "description": "you can roll one additional weapon damage die when determining the extra damage for a critical hit with a melee attack."
+                },
+                {
+                    "name": "Relentless Rage",
+                    "level": 11,
+                    "description": "If you drop to 0 hit points while you are raging and don’t die outright, you can make a DC 10 Constitution saving throw. If you succeed, you drop to 1 hit point instead."
+                },
+                {
+                    "name": "Persistent Rage",
+                    "level": 15,
+                    "description": "Your rage is so fierce that it lasts until the end of your next long rest."
+                },
+                {
+                    "name": "Indomitable Might",
+                    "level": 18,
+                    "description": "If your total for a Strength check is less than your Strength score, you can use that score in place of the total."
+                },
+                {
+                    "name": "Primal Champion",
+                    "level": 20,
+                    "description": "Your Strength and Constitution scores increase by 4. Your maximum for those scores is now 24."
+                }
+            ]
+        }
+    ]
+}
