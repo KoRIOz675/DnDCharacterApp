@@ -135,7 +135,7 @@
             "speed": 25,
             "proficiency": {
                 "weapons": ["battleaxe", "handaxe", "throwing hammer", "warhammer"],
-                "tools": "artisan's tools"
+                "tools": ["artisan's tools"]
             },
             "traits": [
                 {

@@ -2,6 +2,7 @@ package com.nightbreeze.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -13,9 +14,9 @@ public class Species {
     private String size;
     private int speed;
     private Proficiency proficiency;
-    private List<Trait> traits;
-    private List<Language> languages;
-    private List<Subrace> subraces;
+    private List<Trait> traits = new ArrayList<>();
+    private List<Language> languages = new ArrayList<>();
+    private List<Subrace> subraces = new ArrayList<>();
 
     // Getters and Setters for all fields...
     public String getName() {
@@ -63,7 +64,7 @@ public class Species {
     }
 
     public void setTraits(List<Trait> traits) {
-        this.traits = traits;
+        this.traits = (traits != null) ? traits : new ArrayList<>();
     }
 
     public List<Language> getLanguages() {
@@ -71,7 +72,7 @@ public class Species {
     }
 
     public void setLanguages(List<Language> languages) {
-        this.languages = languages;
+        this.languages = (languages != null) ? languages : new ArrayList<>();
     }
 
     public List<Subrace> getSubraces() {
@@ -79,7 +80,7 @@ public class Species {
     }
 
     public void setSubraces(List<Subrace> subraces) {
-        this.subraces = subraces;
+        this.subraces = (subraces != null) ? subraces : new ArrayList<>();
     }
 
     @Override
