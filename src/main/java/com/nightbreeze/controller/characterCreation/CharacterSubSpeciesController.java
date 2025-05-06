@@ -113,8 +113,6 @@ public class CharacterSubSpeciesController implements Initializable {
     }
 
     private void subSpeciesSelection(Subrace subrace, ActionEvent event) throws IOException {
-        System.out.println("SubSpecies: " + subrace.getName());
-
         character.setSubRace(subrace.getName());
 
         characterData.saveCharacterData(character);

@@ -33,10 +33,10 @@ public class JsonFileReader {
             } else if (fileName.equalsIgnoreCase("classes")) {
                 ClassesListWrapper wrapper = mapper.readValue(inputStream, ClassesListWrapper.class);
                 if (wrapper != null && wrapper.getClasses() != null) {
-                    System.out.println("Successfully loaded " + wrapper.getClasses().size() + " species.");
+                    System.out.println("Successfully loaded " + wrapper.getClasses().size() + " classes.");
                     return wrapper.getClasses();
                 } else {
-                    System.err.println("Species data is null or empty in the JSON file: " + resourcePath);
+                    System.err.println("Classes data is null or empty in the JSON file: " + resourcePath);
                     return Collections.emptyList();
                 }
             }
@@ -47,7 +47,7 @@ public class JsonFileReader {
                 return Collections.emptyList();
             }
         } catch (IOException e) {
-            System.err.println("Error reading or parsing species JSON file: " + resourcePath);
+            System.err.println("Error reading or parsing " + fileName + " JSON file: " + resourcePath);
             e.printStackTrace();
             return Collections.emptyList();
         }

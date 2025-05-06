@@ -8,7 +8,6 @@ public class Proficiency {
 
     private List<String> weapons;
     private List<String> tools;
-    private List<String> skill; // Name matches JSON
     private List<String> armor;
 
     // Getters and Setters...
@@ -26,14 +25,6 @@ public class Proficiency {
 
     public void setTools(List<String> tools) {
         this.tools = tools;
-    }
-
-    public List<String> getSkill() {
-        return skill;
-    }
-
-    public void setSkill(List<String> skill) {
-        this.skill = skill;
     }
 
     public List<String> getArmor() {

@@ -2,11 +2,9 @@
     "classes": [
         {
             "name": "Barbarian",
-            "hitDice": "1d12",
+            "hitDice": "d12",
             "hitPointsLevel1": 12,
-            "hitPointsLevel1Modifier": "Constitution",
-            "hitPointsHigherLevel": "1d12",
-            "hitPointsHigherLevelModifier": "Constitution",
+            "hitPointsModifier": "Constitution",
             "proficiencies": {
                 "armor": ["light armor", "medium armor", "shields"],
                 "weapons": ["simple weapons", "martial weapons"],

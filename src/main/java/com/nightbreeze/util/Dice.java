@@ -20,7 +20,7 @@ public class Dice {
         return rand.nextInt(dice) + 1;
     }
 
-    // Roll the dice (classic format: 1d10)
+    // Roll the dice (classic format: 1d10, 1d8, etc.)
     public static int roll(String dice) {
         Matcher m = patDice.matcher(dice);
 

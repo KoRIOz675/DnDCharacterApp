@@ -1,7 +1,6 @@
 package com.nightbreeze.controller.characterCreation;
 
 import static com.nightbreeze.controller.characterCreation.characterNameController.character;
-import static com.nightbreeze.util.Utils.showErrorAlert;
 
 import com.nightbreeze.model.Language;
 import com.nightbreeze.model.Species;
@@ -9,6 +8,7 @@ import com.nightbreeze.model.Trait;
 import com.nightbreeze.util.CharacterData;
 import com.nightbreeze.util.GUIManager;
 import com.nightbreeze.util.JsonFileReader;
+import com.nightbreeze.util.Utils;
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
@@ -64,13 +64,10 @@ public class characterSpeciesController implements Initializable {
         if (speciesList == null) {
             speciesList = JsonFileReader.readJsonDataFile("species");
             if (speciesList.isEmpty()) {
-                showErrorAlert("Data error", "No species found");
+                Utils.showErrorAlert("Data error", "No species found");
                 disableAllButton(true);
             } else {
                 System.out.println("Species data loaded successfully: " + speciesList.size() + " species.");
-                for (Species species : speciesList) {
-                    System.out.println(species.getName());
-                }
             }
         }
         selectedSpecies = null;
@@ -113,8 +110,8 @@ public class characterSpeciesController implements Initializable {
     }
 
     private void speciesSelection(String species, ActionEvent actionEvent) throws IOException {
-        if (speciesList == null || species.isEmpty()) {
-            showErrorAlert("Data error", "Data not loaded");
+        if (speciesList == null || speciesList.isEmpty()) {
+            Utils.showErrorAlert("Data error", "Data not loaded");
             return;
         }
 
@@ -135,13 +132,6 @@ public class characterSpeciesController implements Initializable {
 
             List<String> traits = selectedSpecies.getTraits().stream().map(Trait::getName).collect(Collectors.toList());
             character.setRacialTraits(traits);
-
-            System.out.println("Selected Species: " + selectedSpecies.getName());
-            System.out.println("Character Race set to: " + character.getRace());
-            System.out.println("Character Speed set to: " + character.getSpeed());
-            System.out.println("Character Size set to: " + character.getHeight());
-            System.out.println("Character Languages: " + character.getLanguage());
-            System.out.println("Character Traits: " + character.getRacialTraits());
             characterData.saveCharacterData(character);
 
             boolean hasSubraces = selectedSpecies.getSubraces() != null && !selectedSpecies.getSubraces().isEmpty();
@@ -151,7 +141,7 @@ public class characterSpeciesController implements Initializable {
             Scene scene = stage.getScene();
             scene.setRoot(root);
         } else {
-            showErrorAlert("Error", "Could not find data for species: " + species);
+            Utils.showErrorAlert("Error", "Could not find data for species: " + species);
             System.err.println("Species not found in loaded data: " + species);
         }
     }

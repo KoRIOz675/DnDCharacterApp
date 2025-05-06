@@ -2,6 +2,9 @@ package com.nightbreeze.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.ArrayList;
+import java.util.Dictionary;
+import java.util.Enumeration;
+import java.util.Hashtable;
 import java.util.List;
 import javafx.beans.property.*;
 
@@ -25,6 +28,7 @@ public class Character {
     private final IntegerProperty maxHP = new SimpleIntegerProperty();
     private final IntegerProperty currentHP = new SimpleIntegerProperty();
     private final IntegerProperty temporaryHP = new SimpleIntegerProperty();
+    private final StringProperty hitDice = new SimpleStringProperty();
 
     // Abilities
     private final IntegerProperty strength = new SimpleIntegerProperty();
@@ -42,9 +46,11 @@ public class Character {
     private final StringProperty skin = new SimpleStringProperty();
     private final StringProperty hair = new SimpleStringProperty();
 
-    // Features
+    // Features, Traits and Other Info
     private final List<String> language = new ArrayList<>();
     private final List<String> racialTraits = new ArrayList<>();
+    private final List<String> features = new ArrayList<>();
+    private Hashtable<String, ArrayList<String>> proficiency = new Hashtable<>();
 
     // Constructor
     public Character() {}
@@ -241,6 +247,15 @@ public class Character {
         temporaryHP.set(Math.max(0, hp));
     }
 
+    // Getters & Setters -- HitDice
+    public String getHitDice() {
+        return hitDice.get();
+    }
+
+    public void setHitDice(String hitDice) {
+        this.hitDice.set(hitDice);
+    }
+
     // Getters & Setters -- Ability
     public int getStrength() {
         return strength.get();
@@ -339,7 +354,7 @@ public class Character {
         this.hair.set(hair);
     }
 
-    // Getters & Setters -- Features
+    // Getters & Setters -- Features, Traits and Other Info
     public List<String> getLanguage() {
         return language;
     }
@@ -360,6 +375,25 @@ public class Character {
         if (traits != null) {
             this.racialTraits.addAll(traits);
         }
+    }
+
+    public List<String> getFeatures() {
+        return features;
+    }
+
+    public void setFeatures(List<String> features) {
+        this.features.clear();
+        if (features != null) {
+            this.features.addAll(features);
+        }
+    }
+
+    public Hashtable<String, ArrayList<String>> getProficiency() {
+        return proficiency;
+    }
+
+    public void setProficiency(Hashtable<String, ArrayList<String>> proficiency) {
+        this.proficiency = proficiency;
     }
 
     // Getters -- Ability Modifier
@@ -391,6 +425,21 @@ public class Character {
     @JsonIgnore
     public int getCharismaModifier() {
         return Math.floorDiv(getCharisma() - 10, 2);
+    }
+
+    @Override
+    public String toString() {
+        return (
+            "Character: " +
+            getName() +
+            "\n" +
+            "\tClass: " +
+            getClass().getName() +
+            "\n" +
+            "\tTemporaryHP: " +
+            getTemporaryHP() +
+            "\n"
+        );
     }
 
     // Methods
