@@ -244,18 +244,51 @@
                     }
                 },
                 {
-                    "name": "Mountain Dwarf",
+                    "name": "Wood Elf",
+                    "speed": 35,
                     "abilityScoreIncrease": {
-                        "Strength": 2
+                        "Wisdom": 1
                     },
                     "traits": [
                         {
-                            "name": "Armor Training",
-                            "description": "You are proficient with light and medium armor."
+                            "name": "Elf Weapon Training",
+                            "description": "You have proficiency with the longsword, shortsword, shortbow, and longbow."
+                        },
+                        {
+                            "name": "Mask of the Wild",
+                            "description": "You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena."
                         }
                     ],
                     "proficiency": {
-                        "armor": ["light", "medium"]
+                        "weapons": ["longsword", "shortsword", "shortbow", "longbow"]
+                    }
+                },
+                {
+                    "name": "Dark Elf (Drow)",
+                    "abilityScoreIncrease": {
+                        "Charisma": 1
+                    },
+                    "traits": [
+                        {
+                            "name": "Superior Darkvision",
+                            "range": 120,
+                            "description": "Your darkvision has a radius of 120 feet."
+                        },
+                        {
+                            "name": "Sunlight Sensitivity",
+                            "description": "You have disadvantage on attack rolls and on Wisdom (Perception) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight."
+                        },
+                        {
+                            "name": "Drow Magic",
+                            "description": "You know the dancing lights cantrip. When you reach 3rd level, you can cast the faerie fire spell once per day. When you reach 5th level, you can also cast the darkness spell once per day. Charisma is your spellcasting ability for these spells."
+                        },
+                        {
+                            "name": "Elf Weapon Training",
+                            "description": "You have proficiency with the longsword, shortsword, shortbow, and longbow."
+                        }
+                    ],
+                    "proficiency": {
+                        "weapons": ["longsword", "shortsword", "shortbow", "longbow"]
                     }
                 }
             ]

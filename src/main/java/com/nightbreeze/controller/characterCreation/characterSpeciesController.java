@@ -12,6 +12,7 @@ import com.nightbreeze.util.Utils;
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.stream.Collectors;
@@ -122,6 +123,28 @@ public class characterSpeciesController implements Initializable {
             character.setRace(selectedSpecies.getName());
             character.setHeight(selectedSpecies.getSize());
             character.setSpeed(selectedSpecies.getSpeed());
+
+            Map<String, Integer> abilityScore = selectedSpecies.getAbilityScoreIncrease();
+            for (Map.Entry<String, Integer> entry : abilityScore.entrySet()) {
+                if (entry.getKey().equals("Strength")) {
+                    character.setStrength(entry.getValue());
+                }
+                if (entry.getKey().equals("Dexterity")) {
+                    character.setDexterity(entry.getValue());
+                }
+                if (entry.getKey().equals("Constitution")) {
+                    character.setConstitution(entry.getValue());
+                }
+                if (entry.getKey().equals("Intelligence")) {
+                    character.setIntelligence(entry.getValue());
+                }
+                if (entry.getKey().equals("Wisdom")) {
+                    character.setWisdom(entry.getValue());
+                }
+                if (entry.getKey().equals("Charisma")) {
+                    character.setCharisma(entry.getValue());
+                }
+            }
 
             List<String> languages = selectedSpecies
                 .getLanguages()

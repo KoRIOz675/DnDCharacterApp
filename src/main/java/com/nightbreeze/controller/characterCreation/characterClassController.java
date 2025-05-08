@@ -5,6 +5,7 @@ import static com.nightbreeze.controller.characterCreation.characterNameControll
 import com.nightbreeze.model.Classes;
 import com.nightbreeze.model.Proficiency;
 import com.nightbreeze.util.CharacterData;
+import com.nightbreeze.util.GUIManager;
 import com.nightbreeze.util.JsonFileReader;
 import com.nightbreeze.util.Utils;
 import java.io.IOException;
@@ -20,7 +21,11 @@ import java.util.stream.Collectors;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.stage.Stage;
 
 public class characterClassController implements Initializable {
 
@@ -163,22 +168,12 @@ public class characterClassController implements Initializable {
             character.setProficiency(proficiencies);
 
             characterData.saveCharacterData(character);
-
-            System.out.print(character.toString());
-            //            System.out.println("Armor Proficiency: " + classSelected.getProficienciesArmor());
-            //            System.out.println("Weapons Proficiency: " + classSelected.getProficienciesWeapons());
-            //            System.out.println("Tools Proficiency: " + classSelected.getProficienciesTools());
-            //            System.out.println("=======================");
-            //
-            //            System.out.println("Name: " + character.getName());
-            //            System.out.println("Race: " + character.getRace());
-            //            System.out.println("Subrace: " + character.getSubRace());
-            //            System.out.println("Class: " + character.getClassName());
-            System.out.println("Current HP: " + character.getCurrentHP());
-            System.out.println("Hit Dice: " + character.getHitDice());
-            //            System.out.println("Language: " + character.getLanguage());
-            //            System.out.println("Proficiency: " + character.getProficiency());
-            //            System.out.println("Features: " + character.getFeatures());
+            Boolean asSubClass = false; // Placeholder
+            String nextScreen = asSubClass ? "character-sub-classes" : "character-stats";
+            Parent root = GUIManager.loadFXML(nextScreen);
+            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            Scene scene = stage.getScene();
+            scene.setRoot(root);
         } else {
             Utils.showErrorAlert("Error", "Could not find data for class: " + className);
             System.err.println("Class not found in loaded data: " + className);

@@ -2,8 +2,6 @@ package com.nightbreeze.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.ArrayList;
-import java.util.Dictionary;
-import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.List;
 import javafx.beans.property.*;
