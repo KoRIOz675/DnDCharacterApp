@@ -157,12 +157,20 @@ public class characterSpeciesController implements Initializable {
             character.setRacialTraits(traits);
             characterData.saveCharacterData(character);
 
-            boolean hasSubraces = selectedSpecies.getSubraces() != null && !selectedSpecies.getSubraces().isEmpty();
-            String nextScreen = hasSubraces ? "character-sub-species" : "character-class";
-            Parent root = GUIManager.loadFXML(nextScreen);
-            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-            Scene scene = stage.getScene();
-            scene.setRoot(root);
+            if (!species.equals("Human")) {
+                boolean hasSubraces = selectedSpecies.getSubraces() != null && !selectedSpecies.getSubraces().isEmpty();
+                String nextScreen = hasSubraces ? "character-sub-species" : "character-class";
+                Parent root = GUIManager.loadFXML(nextScreen);
+                Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+                Scene scene = stage.getScene();
+                scene.setRoot(root);
+            } else {
+                String nextScreen = "character-species-human";
+                Parent root = GUIManager.loadFXML(nextScreen);
+                Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+                Scene scene = stage.getScene();
+                scene.setRoot(root);
+            }
         } else {
             Utils.showErrorAlert("Error", "Could not find data for species: " + species);
             System.err.println("Species not found in loaded data: " + species);
