@@ -9,6 +9,8 @@ The current name is a placeholder and the project will possibly be renamed later
 It is done in Java with JavaFX for the visual interface.
 The visual interface in made in SceneBuilder.
 
+Transfer to java and Compose for better visual interface.
+
 ## Recommendations
 
 I recommend that you still have the books on other platforms (DnDBeyond, physical, etc.) as this app doesn't give book's information.
