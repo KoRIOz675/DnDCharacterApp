@@ -83,3 +83,6 @@ desktop.ini
 
 # Linux
 *~
+
+# Image Data
+*.ai
