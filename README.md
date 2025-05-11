@@ -1,6 +1,6 @@
 # DnDCharacterApp
 
-<img src="src/main/resources/com/nightbreeze/images/logo-DnDCharacterApp.jpg" width="250">
+<img src="src/main/resources/com/nightbreeze/images/logo-DnDCharacterApp.svg" width="250" alt="Logo">
 
 This project is an App you can run to create and manipulate your DnD5e characters.
 
