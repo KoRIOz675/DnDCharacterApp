@@ -93,32 +93,32 @@
                   </VBox>
                   <VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="270.0" prefWidth="150.0">
                      <children>
-                        <Button fx:id="strengthRandomButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="Random Value">
+                        <Button fx:id="strengthRandomButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#strengthRandomButtonAction" prefHeight="35.0" prefWidth="120.0" text="Random Value">
                            <VBox.margin>
                               <Insets bottom="5.0" left="10.0" top="5.0" />
                            </VBox.margin>
                         </Button>
-                        <Button fx:id="dexterityRandomButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="Random Value">
+                        <Button fx:id="dexterityRandomButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#dexterityRandomButtonAction" prefHeight="35.0" prefWidth="120.0" text="Random Value">
                            <VBox.margin>
                               <Insets bottom="5.0" left="10.0" top="5.0" />
                            </VBox.margin>
                         </Button>
-                        <Button fx:id="constitutionRandomButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="Random Value">
+                        <Button fx:id="constitutionRandomButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#constitutionRandomButtonAction" prefHeight="35.0" prefWidth="120.0" text="Random Value">
                            <VBox.margin>
                               <Insets bottom="5.0" left="10.0" top="5.0" />
                            </VBox.margin>
                         </Button>
-                        <Button fx:id="inteligenceRandomButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="Random Value">
+                        <Button fx:id="inteligenceRandomButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#intelligenceRandomButtonAction" prefHeight="35.0" prefWidth="120.0" text="Random Value">
                            <VBox.margin>
                               <Insets bottom="5.0" left="10.0" top="5.0" />
                            </VBox.margin>
                         </Button>
-                        <Button fx:id="wisdomRandomButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="Random Value">
+                        <Button fx:id="wisdomRandomButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#wisdomRandomButtonAction" prefHeight="35.0" prefWidth="120.0" text="Random Value">
                            <VBox.margin>
                               <Insets bottom="5.0" left="10.0" top="5.0" />
                            </VBox.margin>
                         </Button>
-                        <Button fx:id="charismaRandomButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="Random Value">
+                        <Button fx:id="charismaRandomButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#charismaRandomButtonAction" prefHeight="35.0" prefWidth="120.0" text="Random Value">
                            <VBox.margin>
                               <Insets bottom="5.0" left="10.0" top="5.0" />
                            </VBox.margin>
@@ -161,7 +161,7 @@
                   </VBox>
                </children>
             </HBox>
-            <Button fx:id="okButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" text="SUBMIT">
+            <Button fx:id="submitButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#submitButtonOnAction" prefHeight="35.0" prefWidth="100.0" text="SUBMIT">
                <VBox.margin>
                   <Insets />
                </VBox.margin></Button>

@@ -9,6 +9,7 @@ import com.nightbreeze.util.CharacterData;
 import com.nightbreeze.util.GUIManager;
 import com.nightbreeze.util.JsonFileReader;
 import com.nightbreeze.util.Utils;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
@@ -16,6 +17,7 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.stream.Collectors;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -147,30 +149,23 @@ public class characterSpeciesController implements Initializable {
             }
 
             List<String> languages = selectedSpecies
-                .getLanguages()
-                .stream()
-                .map(Language::getName)
-                .collect(Collectors.toList());
+                    .getLanguages()
+                    .stream()
+                    .map(Language::getName)
+                    .collect(Collectors.toList());
             character.setLanguage(languages);
 
             List<String> traits = selectedSpecies.getTraits().stream().map(Trait::getName).collect(Collectors.toList());
             character.setRacialTraits(traits);
             characterData.saveCharacterData(character);
 
-            if (!species.equals("Human")) {
-                boolean hasSubraces = selectedSpecies.getSubraces() != null && !selectedSpecies.getSubraces().isEmpty();
-                String nextScreen = hasSubraces ? "character-sub-species" : "character-class";
-                Parent root = GUIManager.loadFXML(nextScreen);
-                Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-                Scene scene = stage.getScene();
-                scene.setRoot(root);
-            } else {
-                String nextScreen = "character-species-human";
-                Parent root = GUIManager.loadFXML(nextScreen);
-                Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-                Scene scene = stage.getScene();
-                scene.setRoot(root);
-            }
+            boolean hasSubraces = selectedSpecies.getSubraces() != null && !selectedSpecies.getSubraces().isEmpty();
+            String nextScreen = hasSubraces ? "character-sub-species" : "character-class";
+            Parent root = GUIManager.loadFXML(nextScreen);
+            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            Scene scene = stage.getScene();
+            scene.setRoot(root);
+
         } else {
             Utils.showErrorAlert("Error", "Could not find data for species: " + species);
             System.err.println("Species not found in loaded data: " + species);

@@ -4,8 +4,11 @@ import static com.nightbreeze.controller.characterCreation.characterNameControll
 
 import com.nightbreeze.util.CharacterData;
 import com.nightbreeze.util.Dice;
+
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import com.nightbreeze.util.Utils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -52,7 +55,7 @@ public class CharacterStatsController implements Initializable {
     private Button charismaRandomButton;
 
     @FXML
-    private Button okButton;
+    private Button submitButton;
 
     @FXML
     private Label strengthBonusLabel;
@@ -74,61 +77,140 @@ public class CharacterStatsController implements Initializable {
 
     CharacterData characterData = new CharacterData();
 
+    int tempStrength;
+    int tempDexterity;
+    int tempConstitution;
+    int tempIntelligence;
+    int tempWisdom;
+    int tempCharisma;
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        disableAllBonusLabel(true);
         if (character.getStrength() != 0) {
-            int tempStrength = character.getStrength();
+            tempStrength = character.getStrength();
             strengthBonusLabel.setText("Current Bonus: +" + tempStrength);
         }
         if (character.getDexterity() != 0) {
-            int tempDexterity = character.getDexterity();
+            tempDexterity = character.getDexterity();
             dexterityBonusLabel.setText("Current Bonus: +" + tempDexterity);
         }
         if (character.getConstitution() != 0) {
-            int tempConstitution = character.getConstitution();
+            tempConstitution = character.getConstitution();
             constitutionBonusLabel.setText("Current Bonus: +" + tempConstitution);
         }
         if (character.getIntelligence() != 0) {
-            int tempIntelligence = character.getIntelligence();
+            tempIntelligence = character.getIntelligence();
             inteligenceBonusLabel.setText("Current Bonus: +" + tempIntelligence);
         }
         if (character.getWisdom() != 0) {
-            int tempWisdom = character.getWisdom();
+            tempWisdom = character.getWisdom();
             wisdomBonusLabel.setText("Current Bonus: +" + tempWisdom);
         }
         if (character.getCharisma() != 0) {
-            int tempCharisma = character.getCharisma();
+            tempCharisma = character.getCharisma();
             charismaBonusLabel.setText("Current Bonus: +" + tempCharisma);
         }
     }
 
-    public void strengthRandomButtonAction(ActionEvent event) {}
+    public void strengthRandomButtonAction(ActionEvent event) {
+        randomStatistic("Strength");
+    }
+
+    public void dexterityRandomButtonAction(ActionEvent event) {
+        randomStatistic("Dexterity");
+    }
+
+    public void constitutionRandomButtonAction(ActionEvent event) {
+        randomStatistic("Constitution");
+    }
+
+    public void intelligenceRandomButtonAction(ActionEvent event) {
+        randomStatistic("Intelligence");
+    }
+
+    public void wisdomRandomButtonAction(ActionEvent event) {
+        randomStatistic("Wisdom");
+    }
+
+    public void charismaRandomButtonAction(ActionEvent event) {
+        randomStatistic("Charisma");
+    }
 
     public void randomStatistic(String stat) {
-        int statistic = Dice.roll(20);
-
-        if (character.getStrength() != 0) {
-            int tempStrength = character.getStrength();
-        } else if (character.getDexterity() != 0) {
-            int tempDexterity = character.getDexterity();
-        } else if (character.getConstitution() != 0) {
-            int tempConstitution = character.getConstitution();
-        } else if (character.getIntelligence() != 0) {
-            int tempIntelligence = character.getIntelligence();
-        } else if (character.getWisdom() != 0) {
-            int tempWisdom = character.getWisdom();
-        } else if (character.getCharisma() != 0) {
-            int tempCharisma = character.getCharisma();
+        if (stat.equals("Strength")) {
+            int temp = Dice.rollD20(tempStrength);
+            if (temp >= 20) {
+                temp = 20;
+            }
+            strengthTextField.setText(Integer.toString(temp));
+        }
+        if (stat.equals("Dexterity")) {
+            int temp = Dice.rollD20(tempDexterity);
+            if (temp >= 20) {
+                temp = 20;
+            }
+            dexterityTextField.setText(Integer.toString(temp));
+        }
+        if (stat.equals("Constitution")) {
+            int temp = Dice.rollD20(tempConstitution);
+            if (temp >= 20) {
+                temp = 20;
+            }
+            constitutionTextField.setText(Integer.toString(temp));
+        }
+        if (stat.equals("Intelligence")) {
+            int temp = Dice.rollD20(tempIntelligence);
+            if (temp >= 20) {
+                temp = 20;
+            }
+            inteligenceTextField.setText(Integer.toString(temp));
+        }
+        if (stat.equals("Wisdom")) {
+            int temp = Dice.rollD20(tempWisdom);
+            if (temp >= 20) {
+                temp = 20;
+            }
+            wisdomTextField.setText(Integer.toString(temp));
+        }
+        if (stat.equals("Charisma")) {
+            int temp = Dice.rollD20(tempCharisma);
+            if (temp >= 20) {
+                temp = 20;
+            }
+            charismaTextField.setText(Integer.toString(temp));
         }
     }
 
-    public void disableAllBonusLabel(Boolean disable) {
-        strengthBonusLabel.setDisable(disable);
-        dexterityBonusLabel.setDisable(disable);
-        constitutionBonusLabel.setDisable(disable);
-        inteligenceBonusLabel.setDisable(disable);
-        wisdomBonusLabel.setDisable(disable);
-        charismaBonusLabel.setDisable(disable);
+    public void submitButtonOnAction(ActionEvent event) {
+        if (strengthTextField.getText().isEmpty()) {
+            Utils.showErrorAlert("Error", "Please enter strength");
+        }
+        if (dexterityTextField.getText().isEmpty()) {
+            Utils.showErrorAlert("Error", "Please enter dexterity");
+        }
+        if (constitutionTextField.getText().isEmpty()) {
+            Utils.showErrorAlert("Error", "Please enter constitution");
+        }
+        if (inteligenceTextField.getText().isEmpty()) {
+            Utils.showErrorAlert("Error", "Please enter intelligence");
+        }
+        if (wisdomTextField.getText().isEmpty()) {
+            Utils.showErrorAlert("Error", "Please enter wisdom");
+        }
+        if (charismaTextField.getText().isEmpty()) {
+            Utils.showErrorAlert("Error", "Please enter charisma");
+        }
+        if (!strengthTextField.getText().isEmpty() || !dexterityTextField.getText().isEmpty() || !constitutionTextField.getText().isEmpty() || !inteligenceTextField.getText().isEmpty() || !wisdomTextField.getText().isEmpty() ||!charismaTextField.getText().isEmpty()) {
+            character.setStrength(Integer.parseInt(strengthTextField.getText()));
+            character.setDexterity(Integer.parseInt(dexterityTextField.getText()));
+            character.setConstitution(Integer.parseInt(constitutionTextField.getText()));
+            character.setIntelligence(Integer.parseInt(inteligenceTextField.getText()));
+            character.setWisdom(Integer.parseInt(wisdomTextField.getText()));
+            character.setCharisma(Integer.parseInt(charismaTextField.getText()));
+
+            characterData.saveCharacterData(character);
+        }
+        System.out.println(character.toString());
     }
 }
