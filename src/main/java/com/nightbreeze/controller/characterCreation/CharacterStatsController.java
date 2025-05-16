@@ -4,11 +4,9 @@ import static com.nightbreeze.controller.characterCreation.characterNameControll
 
 import com.nightbreeze.util.CharacterData;
 import com.nightbreeze.util.Dice;
-
+import com.nightbreeze.util.Utils;
 import java.net.URL;
 import java.util.ResourceBundle;
-
-import com.nightbreeze.util.Utils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -83,7 +81,6 @@ public class CharacterStatsController implements Initializable {
     int tempIntelligence;
     int tempWisdom;
     int tempCharisma;
-
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -201,7 +198,14 @@ public class CharacterStatsController implements Initializable {
         if (charismaTextField.getText().isEmpty()) {
             Utils.showErrorAlert("Error", "Please enter charisma's statistic");
         }
-        if (!strengthTextField.getText().isEmpty() || !dexterityTextField.getText().isEmpty() || !constitutionTextField.getText().isEmpty() || !inteligenceTextField.getText().isEmpty() || !wisdomTextField.getText().isEmpty() ||!charismaTextField.getText().isEmpty()) {
+        if (
+            !strengthTextField.getText().isEmpty() ||
+            !dexterityTextField.getText().isEmpty() ||
+            !constitutionTextField.getText().isEmpty() ||
+            !inteligenceTextField.getText().isEmpty() ||
+            !wisdomTextField.getText().isEmpty() ||
+            !charismaTextField.getText().isEmpty()
+        ) {
             character.setStrength(Integer.parseInt(strengthTextField.getText()));
             character.setDexterity(Integer.parseInt(dexterityTextField.getText()));
             character.setConstitution(Integer.parseInt(constitutionTextField.getText()));

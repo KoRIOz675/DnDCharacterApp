@@ -1,11 +1,9 @@
 package com.nightbreeze.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.List;
-
 import javafx.beans.property.*;
 
 public class Character {
@@ -53,8 +51,7 @@ public class Character {
     private Hashtable<String, ArrayList<String>> proficiency = new Hashtable<>();
 
     // Constructor
-    public Character() {
-    }
+    public Character() {}
 
     // JavaFX Properties
     public StringProperty CharacterNameProperty() {
@@ -439,47 +436,53 @@ public class Character {
     @Override
     public String toString() {
         return (
-                "Character Name: " +
-                        getName() +
-                        "\n" +
-                        "\tPlayer Name: " +
-                        getPlayerName() +
-                        "\tClass: " +
-                        getClassName() +
-                        "\tLevel: " +
-                        getLevel() +
-                        "\n" +
-                        "\tSpecies: " +
-                        getRace() +
-                        "\n" +
-                        "\tSubSpecies: " +
-                        getSubRace() +
-                        "\n" +
-                        "\tAbilities: " +
-                        "\n\t\tStrength: \t" + getStrength() +
-                        "\n\t\tDexterity: \t" + getDexterity() +
-                        "\n\t\tConstitution: \t" + getConstitution() +
-                        "\n\t\tIntelligence: \t" + getIntelligence() +
-                        "\n\t\tWisdom: \t" + getWisdom() +
-                        "\n\t\tCharisma: \t" + getCharisma() +
-                        "\n" +
-                        "\tHit Points: " +
-                        getMaxHP() +
-                        "\n" +
-                        "\tHit Dice: " +
-                        getHitDice() +
-                        "\n" +
-                        "\tBackground:" +
-                        getBackground() +
-                        "\n" +
-                        "\tAlignment:" +
-                        getAlignment() +
-                        "\n" +
-                        "\tSpeed: " +
-                        getSpeed() +
-                        "\n" +
-                        "\tLanguages: " +
-                        getLanguage().toString()
+            "Character Name: " +
+            getName() +
+            "\n" +
+            "\tPlayer Name: " +
+            getPlayerName() +
+            "\tClass: " +
+            getClassName() +
+            "\tLevel: " +
+            getLevel() +
+            "\n" +
+            "\tSpecies: " +
+            getRace() +
+            "\n" +
+            "\tSubSpecies: " +
+            getSubRace() +
+            "\n" +
+            "\tAbilities: " +
+            "\n\t\tStrength: \t" +
+            getStrength() +
+            "\n\t\tDexterity: \t" +
+            getDexterity() +
+            "\n\t\tConstitution: \t" +
+            getConstitution() +
+            "\n\t\tIntelligence: \t" +
+            getIntelligence() +
+            "\n\t\tWisdom: \t" +
+            getWisdom() +
+            "\n\t\tCharisma: \t" +
+            getCharisma() +
+            "\n" +
+            "\tHit Points: " +
+            getMaxHP() +
+            "\n" +
+            "\tHit Dice: " +
+            getHitDice() +
+            "\n" +
+            "\tBackground:" +
+            getBackground() +
+            "\n" +
+            "\tAlignment:" +
+            getAlignment() +
+            "\n" +
+            "\tSpeed: " +
+            getSpeed() +
+            "\n" +
+            "\tLanguages: " +
+            getLanguage().toString()
         );
     }
 

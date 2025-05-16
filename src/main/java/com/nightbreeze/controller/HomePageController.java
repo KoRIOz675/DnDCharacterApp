@@ -1,16 +1,14 @@
 package com.nightbreeze.controller;
 
+import static com.nightbreeze.util.GUIManager.projectName;
+
 import com.nightbreeze.model.Character;
 import com.nightbreeze.util.CharacterData;
 import com.nightbreeze.util.GUIManager;
 import com.nightbreeze.util.Utils;
-
-import static com.nightbreeze.util.GUIManager.projectName;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
