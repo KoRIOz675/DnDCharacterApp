@@ -103,6 +103,7 @@
                     <useTabs>false</useTabs>
                     <ignoreConfigFile>false</ignoreConfigFile>
                     <ignoreEditorConfig>true</ignoreEditorConfig>
+                    <prettierJavaVersion>2.6.0</prettierJavaVersion>
                 </configuration>
                 <executions>
                     <execution>
