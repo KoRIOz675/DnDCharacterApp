@@ -1,0 +1,103 @@
+# Contributing to Draconae Project
+
+First off, thank you for considering contributing to the Draconae Project! We welcome any help, whether it's reporting a bug, proposing a new feature, improving documentation, or writing code.
+
+## 📜 Table of Contents
+
+- [Code of Conduct](#code-of-conduct)
+- [How Can I Contribute?](#how-can-i-contribute)
+    - [Reporting Bugs](#reporting-bugs)
+    - [Suggesting Enhancements](#suggesting-enhancements)
+    - [Your First Code Contribution](#your-first-code-contribution)
+    - [Pull Requests](#pull-requests)
+- [Development Setup](#development-setup)
+- [Style Guides](#style-guides)
+    - [Git Commit Messages](#git-commit-messages)
+    - [Java Style Guide](#java-style-guide)
+    - [FXML Style Guide](#fxml-style-guide)
+
+## Code of Conduct
+
+This project and everyone participating in it is governed by a Code of Conduct. While we don't have a formal one written yet, we expect all contributors to be respectful, open, and considerate. Harassment or exclusionary behavior will not be tolerated. (We may adopt a formal Code of Conduct like the [Contributor Covenant](https://www.contributor-covenant.org/) in the future).
+
+## How Can I Contribute?
+
+### Reporting Bugs
+
+If you find a bug, please ensure the bug was not already reported by searching on GitHub under [Issues](https://github.com/KoRIOz675/DnDCharacterApp/issues).
+
+If you're unable to find an open issue addressing the problem, [open a new one](https://github.com/KoRIOz675/DnDCharacterApp/issues/new). Be sure to include:
+- A **clear and descriptive title**.
+- A **detailed description of the issue**, including steps to reproduce the bug.
+- **Expected behavior** vs. **actual behavior**.
+- **Screenshots or animated GIFs** if they help illustrate the problem.
+- **Your environment details** (OS, Java version, etc.).
+
+### Suggesting Enhancements
+
+If you have an idea for a new feature or an improvement to an existing one:
+1. Search the [Issues](https://github.com/KoRIOz675/DnDCharacterApp/issues) to see if the enhancement has already been suggested.
+2. If not, [open a new issue](https://github.com/KoRIOz675/DnDCharacterApp/issues/new) to start a discussion.
+    - Provide a clear and descriptive title.
+    - Explain the enhancement and why it would be beneficial.
+    - Include any relevant mockups, examples, or details.
+
+### Your First Code Contribution
+
+Unsure where to begin contributing to Draconae? You can start by looking through `good first issue` or `help wanted` issues:
+- [Good first issues](https://github.com/KoRIOz675/DnDCharacterApp/labels/good%20first%20issue) - issues which should only require a few lines of code, and a test or two.
+- [Help wanted issues](https://github.com/KoRIOz675/DnDCharacterApp/labels/help%20wanted) - issues which should be a bit more involved than `good first issue` issues.
+
+### Pull Requests
+
+1.  **Fork the repository** on GitHub.
+2.  **Clone your fork** locally: `git clone https://github.com/YOUR_USERNAME/DnDCharacterApp.git`
+3.  **Create a new branch** for your changes: `git checkout -b feature/your-feature-name` or `fix/bug-fix-description`.
+4.  **Make your changes.** Ensure you follow the [Style Guides](#style-guides).
+5.  **Test your changes** thoroughly.
+6.  **Commit your changes** with a clear and descriptive commit message. See [Git Commit Messages](#git-commit-messages).
+    ```bash
+    git add .
+    git commit -m "feat: Add some amazing feature"
+    ```
+7.  **Push your branch** to your fork: `git push origin feature/your-feature-name`.
+8.  **Open a Pull Request (PR)** to the `main` branch of the `KoRIOz675/DnDCharacterApp` repository.
+    -   Provide a clear title and description for your PR, linking to any relevant issues (e.g., "Closes #123").
+    -   Be prepared to discuss your changes and make adjustments if requested by the maintainers.
+
+## Development Setup
+
+Refer to the [Getting Started](#-getting-started) section in the `README.md` for instructions on how to clone the repository, install prerequisites, and build/run the project.
+
+Key tools:
+- Java 11+
+- Maven
+- An IDE like IntelliJ IDEA, Eclipse, or VS Code with Java extensions is recommended.
+
+## Style Guides
+
+### Git Commit Messages
+
+-   Use descriptive warning (ee.g., `MINOR:`, `MEDIUM:`, `MAJOR:`, `CRITICAL:`)
+-   Use the past tense ("Added feature" not "Add feature").
+-   Use the imperative mood ("Move cursor to..." not "Moves cursor to...").
+-   Limit the first line to 72 characters or less.
+-   Reference issues and PRs liberally after the first line.
+-   Consider using [Conventional Commits](https://www.conventionalcommits.org/) for more structured messages (e.g., `feat:`, `fix:`, `docs:`, `style:`, `refactor:`, `test:`, `chore:`).
+
+### Java Style Guide
+
+-   This project uses [Prettier](https://prettier.io/) with `prettier-plugin-java` for code formatting. The configuration is in `.prettierrc.yaml` and `pom.xml` includes a Maven plugin for Prettier.
+-   Please ensure your code is formatted by Prettier before committing. You can run `mvn prettier:write` to format the code.
+-   Follow standard Java naming conventions (e.g., `camelCase` for methods and variables, `PascalCase` for classes).
+-   Write clear and concise comments where necessary.
+
+### FXML Style Guide
+
+-   Keep FXML files clean and readable.
+-   Use meaningful `fx:id` values.
+-   Organize UI elements logically.
+
+---
+
+Thank you for contributing to the Draconae Project!
