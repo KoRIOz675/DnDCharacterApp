@@ -1,18 +1,18 @@
 <p align="center">
-  <img src="src/main/resources/com/nightbreeze/images/logo-DnDCharacterApp.svg" width="250" alt="Draconae Project Logo">
+  <img src="src/main/resources/com/nightbreeze/images/logo-Draconae-Project.svg" width="250" alt="Draconae Project Logo">
 </p>
 
 <h1 align="center">Draconae Project</h1>
 
 <p align="center">
-  <em>Your digital companion for creating and managing Dungeons & Dragons 5th Edition characters!</em>
+  <em>Your digital companion for creating and managing <a href="https://dnd.wizards.com/" target="_blank">Dungeons & Dragons</a> 5th Edition characters!</em>
   <br><br>
-  <a href="https://github.com/KoRIOz675/DnDCharacterApp/actions">
-    <img src="https://img.shields.io/github/actions/workflow/status/KoRIOz675/DnDCharacterApp/maven.yml?style=for-the-badge&branch=main" alt="Build Status">
+  <a href="https://github.com/KoRIOz675/Draconae-Project/actions">
+    <img src="https://img.shields.io/github/actions/workflow/status/KoRIOz675/Draconae-Project/maven.yml?style=for-the-badge&branch=main" alt="Build Status">
   </a>
   <img src="https://img.shields.io/badge/status-in%20development-blue?style=for-the-badge" alt="Project Status">
   <a href="LICENSE">
-    <img src="https://img.shields.io/github/license/KoRIOz675/DnDCharacterApp?style=for-the-badge" alt="License">
+    <img src="https://img.shields.io/github/license/KoRIOz675/Draconae-Project?style=for-the-badge" alt="License">
   </a>
   <!-- You can add more badges like Java version, JavaFX version, last commit, etc. -->
 </p>
@@ -48,8 +48,8 @@ This project leverages the power of:
 
 *   [![Java](https://img.shields.io/badge/Java%2011+-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.java.com)
 *   [![JavaFX](https://img.shields.io/badge/JavaFX%2023-007396?style=for-the-badge&logo=java&logoColor=white)](https://openjfx.io/) - For the graphical user interface.
-*   [![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)](https://maven.apache.org/) - For project build and dependency management.
 *   **SceneBuilder** - For visually designing the JavaFX interface.
+*   [![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)](https://maven.apache.org/) - For project build and dependency management.
 *   [![Jackson](https://img.shields.io/badge/Jackson-E0234E?style=for-the-badge&logo=json&logoColor=white)](https://github.com/FasterXML/jackson) - For JSON data handling.
 *   [![AtlantaFX](https://img.shields.io/badge/AtlantaFX-1F78D1?style=for-the-badge)](https://mkpaz.github.io/atlantafx/) - For UI theming.
 
@@ -127,11 +127,11 @@ To get a local copy up and running, follow these simple steps.
 
 1.  **Clone the repo:**
     ```bash
-    git clone https://github.com/KoRIOz675/DnDCharacterApp.git
+    git clone https://github.com/KoRIOz675/Draconae-Project.git
     ```
 2.  **Navigate to the project directory:**
     ```bash
-    cd DnDCharacterApp
+    cd Draconae-Project
     ```
 3.  **Build the project using Maven:**
     ```bash

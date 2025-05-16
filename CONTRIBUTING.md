@@ -24,9 +24,9 @@ This project and everyone participating in it is governed by a Code of Conduct. 
 
 ### Reporting Bugs
 
-If you find a bug, please ensure the bug was not already reported by searching on GitHub under [Issues](https://github.com/KoRIOz675/DnDCharacterApp/issues).
+If you find a bug, please ensure the bug was not already reported by searching on GitHub under [Issues](https://github.com/KoRIOz675/Draconae-Project/issues).
 
-If you're unable to find an open issue addressing the problem, [open a new one](https://github.com/KoRIOz675/DnDCharacterApp/issues/new). Be sure to include:
+If you're unable to find an open issue addressing the problem, [open a new one](https://github.com/KoRIOz675/Draconae-Project/issues/new). Be sure to include:
 - A **clear and descriptive title**.
 - A **detailed description of the issue**, including steps to reproduce the bug.
 - **Expected behavior** vs. **actual behavior**.
@@ -36,8 +36,8 @@ If you're unable to find an open issue addressing the problem, [open a new one](
 ### Suggesting Enhancements
 
 If you have an idea for a new feature or an improvement to an existing one:
-1. Search the [Issues](https://github.com/KoRIOz675/DnDCharacterApp/issues) to see if the enhancement has already been suggested.
-2. If not, [open a new issue](https://github.com/KoRIOz675/DnDCharacterApp/issues/new) to start a discussion.
+1. Search the [Issues](https://github.com/KoRIOz675/Draconae-Project/issues) to see if the enhancement has already been suggested.
+2. If not, [open a new issue](https://github.com/KoRIOz675/Draconae-Project/issues/new) to start a discussion.
     - Provide a clear and descriptive title.
     - Explain the enhancement and why it would be beneficial.
     - Include any relevant mockups, examples, or details.
@@ -45,13 +45,13 @@ If you have an idea for a new feature or an improvement to an existing one:
 ### Your First Code Contribution
 
 Unsure where to begin contributing to Draconae? You can start by looking through `good first issue` or `help wanted` issues:
-- [Good first issues](https://github.com/KoRIOz675/DnDCharacterApp/labels/good%20first%20issue) - issues which should only require a few lines of code, and a test or two.
-- [Help wanted issues](https://github.com/KoRIOz675/DnDCharacterApp/labels/help%20wanted) - issues which should be a bit more involved than `good first issue` issues.
+- [Good first issues](https://github.com/KoRIOz675/Draconae-Project/labels/good%20first%20issue) - issues which should only require a few lines of code, and a test or two.
+- [Help wanted issues](https://github.com/KoRIOz675/Draconae-Project/labels/help%20wanted) - issues which should be a bit more involved than `good first issue` issues.
 
 ### Pull Requests
 
 1.  **Fork the repository** on GitHub.
-2.  **Clone your fork** locally: `git clone https://github.com/YOUR_USERNAME/DnDCharacterApp.git`
+2.  **Clone your fork** locally: `git clone https://github.com/YOUR_USERNAME/Draconae-Project.git`
 3.  **Create a new branch** for your changes: `git checkout -b feature/your-feature-name` or `fix/bug-fix-description`.
 4.  **Make your changes.** Ensure you follow the [Style Guides](#style-guides).
 5.  **Test your changes** thoroughly.
@@ -61,7 +61,7 @@ Unsure where to begin contributing to Draconae? You can start by looking through
     git commit -m "feat: Add some amazing feature"
     ```
 7.  **Push your branch** to your fork: `git push origin feature/your-feature-name`.
-8.  **Open a Pull Request (PR)** to the `main` branch of the `KoRIOz675/DnDCharacterApp` repository.
+8.  **Open a Pull Request (PR)** to the `main` branch of the `KoRIOz675/Draconae-Project` repository.
     -   Provide a clear title and description for your PR, linking to any relevant issues (e.g., "Closes #123").
     -   Be prepared to discuss your changes and make adjustments if requested by the maintainers.
 
