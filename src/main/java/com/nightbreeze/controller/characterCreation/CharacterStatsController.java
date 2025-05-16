@@ -184,22 +184,22 @@ public class CharacterStatsController implements Initializable {
 
     public void submitButtonOnAction(ActionEvent event) {
         if (strengthTextField.getText().isEmpty()) {
-            Utils.showErrorAlert("Error", "Please enter strength");
+            Utils.showErrorAlert("Error", "Please enter strength's statistic");
         }
         if (dexterityTextField.getText().isEmpty()) {
-            Utils.showErrorAlert("Error", "Please enter dexterity");
+            Utils.showErrorAlert("Error", "Please enter dexterity's statistic");
         }
         if (constitutionTextField.getText().isEmpty()) {
-            Utils.showErrorAlert("Error", "Please enter constitution");
+            Utils.showErrorAlert("Error", "Please enter constitution's statistic");
         }
         if (inteligenceTextField.getText().isEmpty()) {
-            Utils.showErrorAlert("Error", "Please enter intelligence");
+            Utils.showErrorAlert("Error", "Please enter intelligence's statistic");
         }
         if (wisdomTextField.getText().isEmpty()) {
-            Utils.showErrorAlert("Error", "Please enter wisdom");
+            Utils.showErrorAlert("Error", "Please enter wisdom's statistic");
         }
         if (charismaTextField.getText().isEmpty()) {
-            Utils.showErrorAlert("Error", "Please enter charisma");
+            Utils.showErrorAlert("Error", "Please enter charisma's statistic");
         }
         if (!strengthTextField.getText().isEmpty() || !dexterityTextField.getText().isEmpty() || !constitutionTextField.getText().isEmpty() || !inteligenceTextField.getText().isEmpty() || !wisdomTextField.getText().isEmpty() ||!charismaTextField.getText().isEmpty()) {
             character.setStrength(Integer.parseInt(strengthTextField.getText()));

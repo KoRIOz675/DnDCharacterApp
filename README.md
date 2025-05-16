@@ -1,10 +1,8 @@
-# DnDCharacterApp
+# Draconae Project
 
 <img src="src/main/resources/com/nightbreeze/images/logo-DnDCharacterApp.svg" width="250" alt="Logo">
 
 This project is an App you can run to create and manipulate your DnD5e characters.
-
-The current name is a placeholder and the project will possibly be renamed later on.
 
 It is done in Java with JavaFX for the visual interface.
 The visual interface in made in SceneBuilder.
@@ -38,6 +36,7 @@ This section is for the newest features added to the project.
 
 - Possibility to enter the name of the character
 - Choice for the Species/subspecies if present
+- Choice for the value of the abilities
 
 ### Future improvement
 

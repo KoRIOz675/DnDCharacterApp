@@ -4,9 +4,13 @@ import com.nightbreeze.model.Character;
 import com.nightbreeze.util.CharacterData;
 import com.nightbreeze.util.GUIManager;
 import com.nightbreeze.util.Utils;
+
+import static com.nightbreeze.util.GUIManager.projectName;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -14,6 +18,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 public class HomePageController implements Initializable {
@@ -23,6 +28,9 @@ public class HomePageController implements Initializable {
 
     @FXML
     private Button deleteCharacterButton;
+
+    @FXML
+    private Label ProjectNameLabel;
 
     Character currentCharacter;
 
@@ -45,6 +53,7 @@ public class HomePageController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        ProjectNameLabel.setText(projectName);
         currentCharacter = CharacterData.loadCharacterData();
 
         if (currentCharacter == null) {

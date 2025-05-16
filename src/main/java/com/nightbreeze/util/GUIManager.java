@@ -12,8 +12,9 @@ import javafx.stage.Stage;
 
 public class GUIManager {
 
+    public static String projectName = "Draconae Project";
+
     public static Parent loadFXML(String fxml) throws IOException {
-        // Ensure the path is correct relative to resources root
         URL fxmlUrl = App.class.getResource(fxml + ".fxml");
         if (fxmlUrl == null) {
             throw new IOException("Cannot load FXML file: " + fxml + ".fxml");
@@ -27,7 +28,7 @@ public class GUIManager {
         Stage stage = new Stage();
         Scene scene = new Scene(loadFXML(fxml));
         stage.setScene(scene);
-        stage.setTitle("DnD Character Manager");
+        stage.setTitle(projectName);
         stage.show();
     }
 }
