@@ -48,8 +48,8 @@ This project leverages the power of:
 
 *   [![Java](https://img.shields.io/badge/Java%2011+-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.java.com)
 *   [![JavaFX](https://img.shields.io/badge/JavaFX%2023-007396?style=for-the-badge&logo=java&logoColor=white)](https://openjfx.io/) - For the graphical user interface.
-*   **SceneBuilder** - For visually designing the JavaFX interface.
 *   [![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)](https://maven.apache.org/) - For project build and dependency management.
+*   **SceneBuilder** - For visually designing the JavaFX interface.
 *   [![Jackson](https://img.shields.io/badge/Jackson-E0234E?style=for-the-badge&logo=json&logoColor=white)](https://github.com/FasterXML/jackson) - For JSON data handling.
 *   [![AtlantaFX](https://img.shields.io/badge/AtlantaFX-1F78D1?style=for-the-badge)](https://mkpaz.github.io/atlantafx/) - For UI theming.
 
