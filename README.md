@@ -5,7 +5,7 @@
 <h1 align="center">Draconae Project</h1>
 
 <p align="center">
-  <em>Your digital companion for creating and managing <a href="https://dnd.wizards.com/" target="_blank">Dungeons & Dragons</a> 5th Edition characters!</em>
+  <em>Your digital companion for creating and managing <a href="https://www.dndbeyond.com" target="_blank">Dungeons & Dragons</a> 5th Edition characters!</em>
   <br><br>
   <a href="https://github.com/KoRIOz675/Draconae-Project/actions">
     <img src="https://img.shields.io/github/actions/workflow/status/KoRIOz675/Draconae-Project/maven.yml?style=for-the-badge&branch=main" alt="Build Status">

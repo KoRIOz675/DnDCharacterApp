@@ -39,7 +39,7 @@
                   </Label>
                   <ImageView fx:id="logoImageView" fitHeight="300.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@images/logo-DnDCharacterApp.png" />
+                        <Image url="@images/logo-Draconae-Project.png" />
                      </image>
                      <VBox.margin>
                         <Insets left="30.0" right="30.0" top="30.0" />
