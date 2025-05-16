@@ -1,5 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.nightbreeze</groupId>
     <artifactId>dndcharacterapp</artifactId>
@@ -74,7 +74,8 @@
                         </goals>
                         <configuration>
                             <transformers>
-                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                <transformer
+                                        implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                     <mainClass>${shaded.main.class}</mainClass>
                                 </transformer>
                             </transformers>
@@ -102,7 +103,7 @@
                     <useTabs>false</useTabs>
                     <ignoreConfigFile>false</ignoreConfigFile>
                     <ignoreEditorConfig>true</ignoreEditorConfig>
-                    <prettierJavaVersion>2.6.0</prettierJavaVersion>
+<!--                    <prettierJavaVersion>2.6.0</prettierJavaVersion>-->
                 </configuration>
                 <executions>
                     <execution>
