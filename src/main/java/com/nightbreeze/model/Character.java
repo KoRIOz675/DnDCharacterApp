@@ -1,9 +1,11 @@
 package com.nightbreeze.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.List;
+
 import javafx.beans.property.*;
 
 public class Character {
@@ -21,6 +23,7 @@ public class Character {
     private final IntegerProperty speed = new SimpleIntegerProperty();
 
     private final BooleanProperty inspiration = new SimpleBooleanProperty(false);
+    private final BooleanProperty isSpellCasting = new SimpleBooleanProperty(false);
 
     // Hit Points
     private final IntegerProperty maxHP = new SimpleIntegerProperty();
@@ -51,7 +54,8 @@ public class Character {
     private Hashtable<String, ArrayList<String>> proficiency = new Hashtable<>();
 
     // Constructor
-    public Character() {}
+    public Character() {
+    }
 
     // JavaFX Properties
     public StringProperty CharacterNameProperty() {
@@ -221,6 +225,21 @@ public class Character {
 
     public void setSpeed(int speed) {
         this.speed.set(speed);
+    }
+
+    // Getter & Setters -- Inspiration and Spellcasting
+    public boolean getInspiration() {
+        return inspiration.get();
+    }
+
+    public void setInspiration(boolean inspiration) {
+    }
+
+    public boolean getIsSpellCasting() {
+        return isSpellCasting.get();
+    }
+
+    public void setIsSpellCasting(boolean isSpellCasting) {
     }
 
     // Getters & Setters -- Max Hit Points
@@ -436,53 +455,57 @@ public class Character {
     @Override
     public String toString() {
         return (
-            "Character Name: " +
-            getName() +
-            "\n" +
-            "\tPlayer Name: " +
-            getPlayerName() +
-            "\tClass: " +
-            getClassName() +
-            "\tLevel: " +
-            getLevel() +
-            "\n" +
-            "\tSpecies: " +
-            getRace() +
-            "\n" +
-            "\tSubSpecies: " +
-            getSubRace() +
-            "\n" +
-            "\tAbilities: " +
-            "\n\t\tStrength: \t" +
-            getStrength() +
-            "\n\t\tDexterity: \t" +
-            getDexterity() +
-            "\n\t\tConstitution: \t" +
-            getConstitution() +
-            "\n\t\tIntelligence: \t" +
-            getIntelligence() +
-            "\n\t\tWisdom: \t" +
-            getWisdom() +
-            "\n\t\tCharisma: \t" +
-            getCharisma() +
-            "\n" +
-            "\tHit Points: " +
-            getMaxHP() +
-            "\n" +
-            "\tHit Dice: " +
-            getHitDice() +
-            "\n" +
-            "\tBackground:" +
-            getBackground() +
-            "\n" +
-            "\tAlignment:" +
-            getAlignment() +
-            "\n" +
-            "\tSpeed: " +
-            getSpeed() +
-            "\n" +
-            "\tLanguages: " +
-            getLanguage().toString()
+                "Character Name: " +
+                        getName() +
+                        "\n" +
+                        "\tPlayer Name: " +
+                        getPlayerName() +
+                        "\tClass: " +
+                        getClassName() +
+                        "\tLevel: " +
+                        getLevel() +
+                        "\n" +
+                        "\tSpecies: " +
+                        getRace() +
+                        "\n" +
+                        "\tSubSpecies: " +
+                        getSubRace() +
+                        "\n" +
+                        "\tAbilities: " +
+                        "\n\t\tStrength: \t" +
+                        getStrength() +
+                        "\n\t\tDexterity: \t" +
+                        getDexterity() +
+                        "\n\t\tConstitution: \t" +
+                        getConstitution() +
+                        "\n\t\tIntelligence: \t" +
+                        getIntelligence() +
+                        "\n\t\tWisdom: \t" +
+                        getWisdom() +
+                        "\n\t\tCharisma: \t" +
+                        getCharisma() +
+                        "\n" +
+                        "\tHit Points: " +
+                        getMaxHP() +
+                        "\n" +
+                        "\tHit Dice: " +
+                        getHitDice() +
+                        "\n" +
+                        "\tBackground:" +
+                        getBackground() +
+                        "\n" +
+                        "\tAlignment:" +
+                        getAlignment() +
+                        "\n" +
+                        "\tSpeed: " +
+                        getSpeed() +
+                        "\n" +
+                        "\tLanguages: " +
+                        getLanguage().toString() +
+                        "\n" +
+                        "\tSpellcaster: " +
+                        getIsSpellCasting()
+
         );
     }
 

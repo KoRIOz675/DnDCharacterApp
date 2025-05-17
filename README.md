@@ -46,12 +46,12 @@
 
 This project leverages the power of:
 
-*   [![Java](https://img.shields.io/badge/Java%2011+-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.java.com)
-*   [![JavaFX](https://img.shields.io/badge/JavaFX%2023-007396?style=for-the-badge&logo=java&logoColor=white)](https://openjfx.io/) - For the graphical user interface.
-*   **SceneBuilder** - For visually designing the JavaFX interface.
-*   [![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)](https://maven.apache.org/) - For project build and dependency management.
-*   [![Jackson](https://img.shields.io/badge/Jackson-E0234E?style=for-the-badge&logo=json&logoColor=white)](https://github.com/FasterXML/jackson) - For JSON data handling.
-*   [![AtlantaFX](https://img.shields.io/badge/AtlantaFX-1F78D1?style=for-the-badge)](https://mkpaz.github.io/atlantafx/) - For UI theming.
+- [![Java](https://img.shields.io/badge/Java%2011+-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.java.com)
+- [![JavaFX](https://img.shields.io/badge/JavaFX%2023-007396?style=for-the-badge&logo=java&logoColor=white)](https://openjfx.io/) - For the graphical user interface.
+- **SceneBuilder** - For visually designing the JavaFX interface.
+- [![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)](https://maven.apache.org/) - For project build and dependency management.
+- [![Jackson](https://img.shields.io/badge/Jackson-E0234E?style=for-the-badge&logo=json&logoColor=white)](https://github.com/FasterXML/jackson) - For JSON data handling.
+- [![AtlantaFX](https://img.shields.io/badge/AtlantaFX-1F78D1?style=for-the-badge)](https://mkpaz.github.io/atlantafx/) - For UI theming.
 
 ---
 
@@ -59,13 +59,13 @@ This project leverages the power of:
 
 Draconae is being developed to include the following key functionalities:
 
-*   **Character Creation:** Build your unique hero from the ground up.
-*   **Character Persistence:** Saving and loading character data locally.
-*   **Health Management:** Track hit points, temporary HP, and apply damage seamlessly (Planned).
-*   **Spellcasting:** Manage spell lists and available spell slots (Planned).
-*   **Death Saves:** Keep track of those crucial life-or-death rolls (Planned).
-*   **Ability & Skill Checks:** Perform saving throws, basic ability checks, and skill tests (Planned).
-*    **Combat Rolls:** Make attack and damage rolls with ease (Planned).
+- **Character Creation:** Build your unique hero from the ground up.
+- **Character Persistence:** Saving and loading character data locally.
+- **Health Management:** Track hit points, temporary HP, and apply damage seamlessly (Planned).
+- **Spellcasting:** Manage spell lists and available spell slots (Planned).
+- **Death Saves:** Keep track of those crucial life-or-death rolls (Planned).
+- **Ability & Skill Checks:** Perform saving throws, basic ability checks, and skill tests (Planned).
+- **Combat Rolls:** Make attack and damage rolls with ease (Planned).
 
 ---
 
@@ -75,32 +75,32 @@ Draconae is being developed to include the following key functionalities:
 
 We are actively working on:
 
-*   **Main Page UI/UX:** Refining the visual design and user experience of the primary interface.
-*   **Data Integration:** Developing and refining JSON files for essential game data (species, weapons, classes, armors, tools, etc.).
-*   **Character Persistence:** Enhancing character creation flow and ensuring robust saving/loading to a local JSON file (targeting `C:\Users\[user]\Documents\DnDAppCharacters`).
-*   **Displaying Character Information:** Implementing UI elements to show the created character's details.
+- **Main Page UI/UX:** Refining the visual design and user experience of the primary interface.
+- **Data Integration:** Developing and refining JSON files for essential game data (species, weapons, classes, armors, tools, etc.).
+- **Character Persistence:** Enhancing character creation flow and ensuring robust saving/loading to a local JSON file (targeting `C:\Users\[user]\Documents\DnDAppCharacters`).
+- **Displaying Character Information:** Implementing UI elements to show the created character's details.
 
 ### ✨ Recently Added
 
 The newest features integrated into the project:
 
-*   Character name input.
-*   Species and sub-species selection (where applicable).
-*   Ability score assignment (basic input and random generation).
-*   Class selection.
-*   Basic character data saving to JSON.
-*   Home page with character loading/creation/deletion options.
+- Character name input.
+- Species and sub-species selection (where applicable).
+- Ability score assignment (basic input and random generation).
+- Class selection.
+- Basic character data saving to JSON.
+- Home page with character loading/creation/deletion options.
 
 ### 🚀 Future Enhancements
 
 Once the core application is stable, we plan to expand with:
 
-*   **Expanded Species:** Incorporating races beyond the Player's Handbook.
-*   **Expanded Classes & Subclasses:** Adding character classes and subclasses beyond the Player's Handbook.
-*   **Full Character Sheet View:** A comprehensive display of all character attributes, skills, inventory, etc.
-*   **Integrated Dice Roller:** For various game checks and rolls.
-*   **Inventory Management.**
-*   **Spell Book Management.**
+- **Expanded Species:** Incorporating races beyond the Player's Handbook.
+- **Expanded Classes & Subclasses:** Adding character classes and subclasses beyond the Player's Handbook.
+- **Full Character Sheet View:** A comprehensive display of all character attributes, skills, inventory, etc.
+- **Integrated Dice Roller:** For various game checks and rolls.
+- **Inventory Management.**
+- **Spell Book Management.**
 
 ---
 
@@ -118,10 +118,10 @@ To get a local copy up and running, follow these simple steps.
 
 ### Prerequisites
 
-*   **Java Development Kit (JDK)** - Version 11 or higher.
-*   **Apache Maven** - Version 3.6 or higher.
-    *   Verify installation: `mvn --version`
-*   **Git** - For cloning the repository.
+- **Java Development Kit (JDK)** - Version 11 or higher.
+- **Apache Maven** - Version 3.6 or higher.
+    - Verify installation: `mvn --version`
+- **Git** - For cloning the repository.
 
 ### Installation & Running
 
@@ -154,9 +154,9 @@ Please see our [**CONTRIBUTING.md**](CONTRIBUTING.md) file for details on how to
 
 ## 🙏 Acknowledgements
 
-*   **UI Theme:** The visual theme used is [Primer Light](https://mkpaz.github.io/atlantafx/) from the excellent [AtlantaFX](https://mkpaz.github.io/atlantafx/) library.
-*   [Shields.io](https://shields.io/) - For the awesome badges.
-*   All Dungeons & Dragons 5th Edition content is property of Wizards of the Coast.
+- **UI Theme:** The visual theme used is [Primer Light](https://mkpaz.github.io/atlantafx/) from the excellent [AtlantaFX](https://mkpaz.github.io/atlantafx/) library.
+- [Shields.io](https://shields.io/) - For the awesome badges.
+- All Dungeons & Dragons 5th Edition content is property of Wizards of the Coast.
 
 ---
 
