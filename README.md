@@ -19,7 +19,7 @@
 ---
 
 > [!NOTE]
-> This repository has been discontinued. The new version is accessible here: [Night-Breeze-Inn/Draconae-Projct](https://github.com/Night-Breeze-Inn/Draconae-Project)
+> This repository has been discontinued. The new version is accessible here: [Night-Breeze-Inn/Draconae-Project](https://github.com/Night-Breeze-Inn/Draconae-Project)
 
 ---
 
