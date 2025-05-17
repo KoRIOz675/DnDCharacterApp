@@ -78,12 +78,12 @@ Key tools:
 
 ### Git Commit Messages
 
--   Use descriptive warning (ee.g., `MINOR:`, `MEDIUM:`, `MAJOR:`, `CRITICAL:`)
+-   Use descriptive warning (e.g., `MINOR:`, `MEDIUM:`, `MAJOR:`, `CRITICAL:` ) 
+-   use conventional commits (e.g., `fix:`, `docs:`, `style:`)
 -   Use the past tense ("Added feature" not "Add feature").
 -   Use the imperative mood ("Move cursor to..." not "Moves cursor to...").
 -   Limit the first line to 72 characters or less.
 -   Reference issues and PRs liberally after the first line.
--   Consider using [Conventional Commits](https://www.conventionalcommits.org/) for more structured messages (e.g., `feat:`, `fix:`, `docs:`, `style:`, `refactor:`, `test:`, `chore:`).
 
 ### Java Style Guide
 
@@ -97,6 +97,55 @@ Key tools:
 -   Keep FXML files clean and readable.
 -   Use meaningful `fx:id` values.
 -   Organize UI elements logically.
+
+### Conventional Commits And Warnings
+
+Conventional Commits
+```markdown
+**fix**     *a bug fix has occurred*
+**chore**   *changes that do not relate to a fix or feature and don't modify src or test files (for example updating 
+             dependencies)*
+**refactor***refactored code that neither fixes a bug nor adds a feature*
+**docs**    *updates to documentation such as a the README or other markdown files*
+**style**   *changes that do not affect the meaning of the code, likely related to code formatting such as white-space,
+             missing colons, and so on.*
+**test**    *including new or correcting previous tests*
+**perf**    *performance improvements*
+**ci**      *continuous integration related*
+**build**   *changes that affect the build system or external dependencies*
+**revert**  *reverts a previous commit*
+```
+descriptive warning
+```markdown
+**MINOR**    *minor change, very low risk of impact. It is often the case for
+             code additions that don't touch live code. As a rule of thumb, a
+             patch tagged "MINOR" is safe enough to be backported to stable
+             branches. For a bug, it generally indicates an annoyance, nothing
+             more.*
+
+**MEDIUM**   *medium risk, may cause unexpected regressions of low importance or
+             which may quickly be discovered. In short, the patch is safe but
+             touches working areas and it is always possible that you missed
+             something you didn't know existed (eg: adding a "case" entry or
+             an error message after adding an error code to an enum). For a bug,
+             it generally indicates something odd which requires changing the
+             configuration in an undesired way to work around the issue.*
+
+**MAJOR**    *major risk of hidden regression. This happens when large parts of
+             the code are rearranged, when new timeouts are introduced, when
+             sensitive parts of the session scheduling are touched, etc... We
+             should only exceptionally find such patches in stable branches when
+             there is no other option to fix a design issue. For a bug, it
+             indicates severe reliability issues for which workarounds are
+             identified with or without performance impacts.*
+
+**CRITICAL** *medium-term reliability or security is at risk and workarounds,
+             if they exist, might not always be acceptable. An upgrade is
+             absolutely required. A maintenance release may be emitted even if
+             only one of these bugs are fixed. Note that this tag is only used
+             with bugs. Such patches must indicate what is the first version
+             affected, and if known, the commit ID which introduced the issue.*
+```
 
 ---
 
