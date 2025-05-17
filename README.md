@@ -14,8 +14,12 @@
   <a href="LICENSE">
     <img src="https://img.shields.io/github/license/KoRIOz675/Draconae-Project?style=for-the-badge" alt="License">
   </a>
-  <!-- You can add more badges like Java version, JavaFX version, last commit, etc. -->
 </p>
+
+---
+
+> [!IMPORTANT]
+> This repo has been discontinued. The new version is accessible here: [Night-Breeze-Inn/Draconae-Projct](https://github.com/Night-Breeze-Inn/Draconae-Project)
 
 ---
 
